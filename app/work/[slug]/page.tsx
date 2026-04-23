@@ -54,7 +54,7 @@ export default async function CaseStudyPage({
           >
             ← All case studies
           </Link>
-          <div className="mt-10 max-w-[52ch]">
+          <div className="mt-10 max-w-[58ch]">
             <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan/80">
               {study.industry} · {study.year}
             </div>
@@ -84,7 +84,7 @@ export default async function CaseStudyPage({
         </div>
       </Section>
 
-      <Section className="py-20 md:py-28">
+      <Section className="py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-3">
           {study.metrics.map((m) => (
             <div key={m.label} className="border-l border-white/10 pl-5">
@@ -124,6 +124,55 @@ export default async function CaseStudyPage({
           </div>
         </div>
       </Section>
+
+      {study.uiMockup && (
+        <Section className="py-10 md:py-20">
+          <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2">
+            <Image
+              src={study.uiMockup}
+              alt={`${study.client} UI screen`}
+              width={2240}
+              height={1260}
+              className="w-full h-auto"
+            />
+            <div aria-hidden className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-obsidian/20 via-transparent to-transparent" />
+          </div>
+          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-fog-2 text-center">
+            Platform screenshot · demo data
+          </p>
+        </Section>
+      )}
+
+      {study.featureGroups?.length > 0 && (
+        <Section className="py-16 md:py-28">
+          <div className="mb-14">
+            <Eyebrow>Inside the build</Eyebrow>
+            <h2 className="mt-6 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
+              Every feature shipped, line by line.
+            </h2>
+          </div>
+          <div className="grid gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06] md:grid-cols-2">
+            {study.featureGroups.map((group) => (
+              <div key={group.title} className="bg-obsidian p-8 md:p-10">
+                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan/80">
+                  {group.title}
+                </div>
+                <ul className="mt-6 space-y-4">
+                  {group.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-4 text-[14.5px] leading-[1.55] text-cream/85"
+                    >
+                      <span className="shrink-0 mt-2 h-1 w-5 bg-gradient-accent rounded-full" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
 
       <Section className="py-16 md:py-24">
         <div className="grid gap-12 md:grid-cols-12">
