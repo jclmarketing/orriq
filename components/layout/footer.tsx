@@ -37,14 +37,9 @@ export function Footer() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-5 max-w-sm text-[14px] leading-relaxed text-fog">
-              Orriq is a bespoke operational infrastructure, built by{" "}
-              <a
-                href="https://jclmarketing.co.uk"
-                className="text-cream/80 hover:text-cream transition-colors"
-              >
-                JCL Marketing
-              </a>
-              . For companies that refuse to run on generic SaaS.
+              Orriq builds bespoke operational infrastructure for companies
+              that refuse to run on generic SaaS — CRM, AI, automation, and
+              business operating systems shaped to how you actually work.
             </p>
             <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-fog-2">
               Built on Orriq.

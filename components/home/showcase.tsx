@@ -109,16 +109,16 @@ export function Showcase() {
       />
 
       <div className="mx-auto w-full max-w-[1240px] px-6 md:px-10 lg:px-14 pt-28 md:pt-36 pb-20">
-        <div className="max-w-[54ch] mb-14">
-          <Eyebrow tone="accent">What you actually get</Eyebrow>
+        <div className="max-w-[60ch] mb-14">
+          <Eyebrow tone="accent">Operating systems we've already shipped</Eyebrow>
           <h2 className="mt-6 font-display text-[clamp(2rem,4vw,3.75rem)] leading-[1.02] tracking-[-0.03em]">
-            <span>Scroll through the builds.</span>{" "}
-            <span className="italic text-fog">Real platforms, real features, real data.</span>
+            <span>Real CRM screens.</span>{" "}
+            <span className="italic text-fog">Real workflows. Real business processes.</span>
           </h2>
           <p className="mt-6 text-[16px] leading-[1.6] text-cream/70">
-            Eight screens from the platforms we've shipped. Every one of these
-            is production software running for a paying operator — no fake
-            lorem-ipsum product shots.
+            Eight screens from operating systems we've built and shipped — not
+            concept shots. Every one is production software running for a
+            paying operator right now.
           </p>
         </div>
       </div>

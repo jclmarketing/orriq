@@ -55,13 +55,12 @@ export function Hero() {
           </h1>
 
           <p
-            className="max-w-[56ch] text-[17px] md:text-[19px] leading-[1.55] text-cream/75 anim-fade-up"
+            className="max-w-[60ch] text-[17px] md:text-[19px] leading-[1.55] text-cream/75 anim-fade-up"
             style={{ animationDelay: "160ms" }}
           >
-            Orriq is the operational layer for companies that refuse to squeeze
-            themselves into generic SaaS. Bespoke CRM, AI, and automation —
-            built to fit how you actually work. Owned by you. Built on modern
-            infrastructure. Shipped in weeks.
+            Orriq builds bespoke CRM, AI automation, and business operating
+            systems around the way your company actually works — so your
+            leads, workflows, data, and revenue stop leaking between tools.
           </p>
 
           <div
@@ -77,23 +76,24 @@ export function Hero() {
           </div>
 
           <div
-            className="grid grid-cols-3 gap-8 md:gap-14 pt-8 anim-fade-up"
+            className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-6 anim-fade-up"
             style={{ animationDelay: "320ms" }}
           >
-            {[
-              { k: "Bespoke", v: "Every schema, every flow — shaped to your business." },
-              { k: "Owned", v: "Your Supabase. Your code. No per-seat vendor tax." },
-              { k: "Shipped", v: "Live in weeks, not the six-month SaaS rollout." },
-            ].map((item) => (
-              <div key={item.k} className="max-w-xs">
-                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan/80">
-                  {item.k}
+            {["Observe", "Reveal", "Reactivate", "Integrate", "Quantify"].map(
+              (w, i) => (
+                <div key={w} className="flex items-center gap-3">
+                  <span className="font-display text-[22px] leading-none tracking-[-0.02em] text-gradient-accent">
+                    {w[0]}
+                  </span>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/70">
+                    {w}
+                  </span>
+                  {i < 4 && (
+                    <span aria-hidden className="h-px w-4 bg-fog/30 hidden sm:inline-block" />
+                  )}
                 </div>
-                <div className="mt-2 text-[14px] leading-relaxed text-cream/70">
-                  {item.v}
-                </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       </div>

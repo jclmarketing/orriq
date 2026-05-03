@@ -30,11 +30,17 @@ export function PlatformPreview() {
   return (
     <Section className="py-28 md:py-36">
       <div className="flex flex-col gap-4 mb-16 md:mb-20 md:flex-row md:items-end md:justify-between">
-        <div>
+        <div className="max-w-[64ch]">
           <Eyebrow tone="accent">The platform</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
-            Modern infrastructure, assembled for <span className="italic">your</span> business.
+          <h2 className="mt-6 font-display text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[20ch]">
+            One operating layer behind the whole business.
           </h2>
+          <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70 max-w-[58ch]">
+            Once we observe, reveal, and reactivate the opportunity, we
+            integrate the systems and quantify the result. CRM records, AI
+            agents, automation, integrations, dashboards — all under one roof
+            you actually own.
+          </p>
         </div>
         <Button href="/platform" variant="secondary" size="md" trailingArrow>
           How Orriq is built

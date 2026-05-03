@@ -26,9 +26,10 @@ export function CTA() {
               Let's build the <span className="italic text-gradient-accent">shape</span> your business deserves.
             </h2>
             <p className="mt-6 max-w-[56ch] text-[16px] md:text-[17px] leading-[1.6] text-cream/75">
-              Book a 30-minute discovery call. We'll map what you run today,
-              what's costing you, and what an Orriq build would look like — no
-              pitch deck, no sales rep.
+              Book a 30-minute discovery call. We'll map your current tools,
+              find the hidden leaks, and show you what your Orriq operating
+              system could look like — no pitch deck, no sales rep, no junior
+              hand-off.
             </p>
           </div>
           <div className="md:col-span-4 flex md:justify-end">
