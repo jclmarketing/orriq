@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/shared/button";
 import { DotGrid } from "@/components/shared/dot-grid";
 import { MonoLabel } from "@/components/shared/mono-label";
+import { HeroStack } from "@/components/home/hero-stack";
 import { ArrowUpRight } from "lucide-react";
 
 export function HeroV2() {
@@ -78,35 +78,14 @@ export function HeroV2() {
         </div>
 
         <div
-          className="relative mx-auto max-w-[1100px] anim-fade-up"
+          className="relative mx-auto pt-6 pb-24 md:pb-32 anim-fade-up"
           style={{ animationDelay: "380ms" }}
         >
-          <div
-            aria-hidden
-            className="absolute -inset-8 rounded-[40px] opacity-50 blur-3xl"
-            style={{
-              background:
-                "radial-gradient(60% 50% at 50% 50%, rgba(34,211,238,0.5) 0%, rgba(167,139,250,0.25) 40%, transparent 75%)",
-            }}
-          />
-          <div className="relative rounded-2xl md:rounded-3xl glass-strong overflow-hidden shadow-glow-soft">
-            <Image
-              src="/assets/hero-dashboard.png"
-              alt="Orriq operating system dashboard"
-              width={2240}
-              height={1260}
-              className="w-full h-auto"
-              priority
-            />
-            <div
-              aria-hidden
-              className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent pointer-events-none"
-            />
-          </div>
+          <HeroStack />
 
-          <div className="absolute -bottom-3 left-6 md:left-10">
+          <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-40">
             <div className="glass rounded-full px-3 py-1.5">
-              <MonoLabel withDot tone="live">Live operator dashboard · demo data</MonoLabel>
+              <MonoLabel withDot tone="live">Live operator dashboards · mockup data</MonoLabel>
             </div>
           </div>
         </div>

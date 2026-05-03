@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { Section } from "@/components/shared/section";
 import { MonoLabel } from "@/components/shared/mono-label";
@@ -143,12 +142,16 @@ export function PlatformTour() {
                   t.id === activeId ? "opacity-100" : "opacity-0 pointer-events-none",
                 )}
               >
-                <Image
-                  src={t.image}
-                  alt={t.title}
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
+                <video
+                  src={t.image.replace("/assets/ui/", "/assets/ui-video/").replace(/\.png$/, ".mp4")}
+                  poster={t.image}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={t.title}
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-obsidian/40 via-transparent to-transparent" />
               </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { cn } from "@/lib/utils";
@@ -135,13 +134,16 @@ export function Showcase() {
                     i === active ? "opacity-100" : "opacity-0",
                   )}
                 >
-                  <Image
-                    src={f.image}
-                    alt={f.alt}
-                    fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    className="object-cover"
-                    priority={i === 0}
+                  <video
+                    src={f.image.replace("/assets/ui/", "/assets/ui-video/").replace(/\.png$/, ".mp4")}
+                    poster={f.image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-label={f.alt}
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-obsidian/30 via-transparent to-transparent" />
                 </div>
