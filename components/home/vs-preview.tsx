@@ -2,6 +2,7 @@ import Link from "next/link";
 import { competitors } from "@/lib/competitors";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { Section } from "@/components/shared/section";
+import { BrandLogo } from "@/components/shared/brand-logo";
 import { ArrowUpRight } from "lucide-react";
 
 export function VsPreview() {
@@ -30,8 +31,11 @@ export function VsPreview() {
               <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-fog-2">
                 vs
               </div>
-              <div className="mt-2 font-sans font-semibold tracking-tight text-[clamp(1.4rem,2.2vw,2rem)] tracking-[-0.02em]">
-                {c.name}
+              <div className="mt-3 flex items-center gap-3">
+                <BrandLogo name={c.name} size="h-7 md:h-8" iconOnly />
+                <span className="font-sans font-semibold tracking-tight text-[clamp(1.4rem,2.2vw,2rem)] tracking-[-0.02em]">
+                  {c.name}
+                </span>
               </div>
             </div>
             <div className="flex items-center justify-between">

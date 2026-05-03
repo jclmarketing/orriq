@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Section } from "@/components/shared/section";
 import { MonoLabel } from "@/components/shared/mono-label";
+import { BrandLogo } from "@/components/shared/brand-logo";
 
 const industries = [
   { name: "Manufacturing", note: "Made-to-measure quote-to-cash" },
@@ -78,9 +79,9 @@ export function Industries() {
               {[...partners, ...partners].map((p, i) => (
                 <div
                   key={`${p}-${i}`}
-                  className="shrink-0 font-sans font-semibold tracking-tight text-[18px] md:text-[20px] tracking-[-0.01em] text-cream/55 hover:text-cream/90 transition-colors"
+                  className="shrink-0 opacity-60 hover:opacity-100 transition-opacity"
                 >
-                  {p}
+                  <BrandLogo name={p} size="h-7 md:h-8" iconOnly />
                 </div>
               ))}
             </div>

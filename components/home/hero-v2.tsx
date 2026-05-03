@@ -2,8 +2,17 @@ import Link from "next/link";
 import { Button } from "@/components/shared/button";
 import { DotGrid } from "@/components/shared/dot-grid";
 import { MonoLabel } from "@/components/shared/mono-label";
+import { BrandLogo } from "@/components/shared/brand-logo";
 import { HeroStack } from "@/components/home/hero-stack";
 import { ArrowUpRight } from "lucide-react";
+
+const HERO_PROOF_BRANDS = [
+  "McDonald's",
+  "Jaguar Land Rover",
+  "Starbucks",
+  "Amazon",
+  "Johnson & Johnson",
+];
 
 export function HeroV2() {
   return (
@@ -74,6 +83,20 @@ export function HeroV2() {
             <span>30-day live, or you don't pay</span>
             <span className="text-fog-2">·</span>
             <span>You own the code</span>
+          </div>
+
+          <div
+            className="anim-fade-up flex flex-col items-center gap-4 pt-6 w-full"
+            style={{ animationDelay: "380ms" }}
+          >
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-fog-2">
+              Founders' delivery experience inside enterprise environments at
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 opacity-70">
+              {HERO_PROOF_BRANDS.map((b) => (
+                <BrandLogo key={b} name={b} size="h-5 md:h-6" iconOnly />
+              ))}
+            </div>
           </div>
         </div>
 

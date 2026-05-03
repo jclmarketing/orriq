@@ -1,5 +1,6 @@
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { Section } from "@/components/shared/section";
+import { BrandLogo } from "@/components/shared/brand-logo";
 
 const stack = [
   { name: "Supabase", note: "Database & auth" },
@@ -50,9 +51,7 @@ export function TechCarousel() {
                 key={`${s.name}-${i}`}
                 className="shrink-0 hairline rounded-full px-5 py-3 bg-white/[0.02] hover:bg-white/[0.05] transition-colors flex items-center gap-3"
               >
-                <span className="font-sans font-semibold tracking-tight text-[15px] tracking-[-0.01em] text-cream/90">
-                  {s.name}
-                </span>
+                <BrandLogo name={s.name} size="h-[18px]" />
                 <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-fog-2">
                   {s.note}
                 </span>
