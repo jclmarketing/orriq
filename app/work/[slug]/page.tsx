@@ -61,7 +61,7 @@ export default async function CaseStudyPage({
             <div className="mt-4 text-[15px] text-cream/70 font-mono tracking-[-0.01em]">
               {study.client}
             </div>
-            <h1 className="mt-6 font-display text-[clamp(2.5rem,5.5vw,5rem)] leading-[0.98] tracking-[-0.035em]">
+            <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.5rem,5.5vw,5rem)] leading-[0.98] tracking-[-0.035em]">
               {study.headline}
             </h1>
             <p className="mt-8 text-[17px] leading-[1.6] text-cream/75">
@@ -88,7 +88,7 @@ export default async function CaseStudyPage({
         <div className="grid gap-10 md:grid-cols-3">
           {study.metrics.map((m) => (
             <div key={m.label} className="border-l border-white/10 pl-5">
-              <div className="font-display text-[clamp(2rem,3vw,2.5rem)] tracking-[-0.02em]">
+              <div className="font-sans font-semibold tracking-tight text-[clamp(2rem,3vw,2.5rem)] tracking-[-0.02em]">
                 {m.value}
               </div>
               <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-fog">
@@ -105,7 +105,7 @@ export default async function CaseStudyPage({
             <Eyebrow>The challenge</Eyebrow>
           </div>
           <div className="md:col-span-8">
-            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-display tracking-[-0.01em] max-w-[58ch]">
+            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
               {study.challenge}
             </p>
           </div>
@@ -118,7 +118,7 @@ export default async function CaseStudyPage({
             <Eyebrow tone="accent">The build</Eyebrow>
           </div>
           <div className="md:col-span-8">
-            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-display tracking-[-0.01em] max-w-[58ch]">
+            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
               {study.solution}
             </p>
           </div>
@@ -147,7 +147,7 @@ export default async function CaseStudyPage({
         <Section className="py-16 md:py-28">
           <div className="mb-14">
             <Eyebrow>Inside the build</Eyebrow>
-            <h2 className="mt-6 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
+            <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
               Every feature shipped, line by line.
             </h2>
           </div>
@@ -230,7 +230,7 @@ export default async function CaseStudyPage({
               <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-fog">
                 Next case study
               </div>
-              <div className="mt-3 font-display text-[clamp(1.5rem,2.8vw,2.5rem)] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
+              <div className="mt-3 font-sans font-semibold tracking-tight text-[clamp(1.5rem,2.8vw,2.5rem)] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
                 {next.headline}
               </div>
               <div className="mt-5 inline-flex items-center gap-2 text-[14px] text-cream/80 group-hover:text-cream transition-colors">
@@ -244,7 +244,7 @@ export default async function CaseStudyPage({
 
       <Section className="py-20">
         <div className="text-center max-w-[52ch] mx-auto">
-          <h2 className="font-display text-[clamp(1.8rem,3.5vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
+          <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.5vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
             Want something like this, shaped around your business?
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

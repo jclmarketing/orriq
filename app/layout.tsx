@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
@@ -16,24 +16,18 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const displaySerif = Fraunces({
-  variable: "--font-display",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://orriq.com"),
   title: {
-    default: "Orriq — Software built around your business.",
+    default: "Orriq — The operating system your business should be running on.",
     template: "%s · Orriq",
   },
   description:
-    "Orriq builds bespoke operational infrastructure for companies that refuse to bend themselves around generic SaaS. Custom CRM, AI, automation — owned by you.",
+    "Orriq is the bespoke CRM, AI, and automation layer that replaces the patchwork of generic SaaS your business is duct-taped together with. One platform. Your schema. Your data. Built for you, owned by you.",
   openGraph: {
-    title: "Orriq — Software built around your business.",
+    title: "Orriq — The operating system your business should be running on.",
     description:
-      "Bespoke operational infrastructure. Custom CRM, AI, automation — owned by you.",
+      "Bespoke CRM, AI, and automation. One operating layer. Built for you, owned by you.",
     url: "https://orriq.com",
     siteName: "Orriq",
     type: "website",
@@ -41,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Orriq",
-    description: "Software built around your business.",
+    description: "The operating system your business should be running on.",
   },
 };
 
@@ -53,9 +47,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${displaySerif.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-[100dvh] flex flex-col bg-obsidian text-cream">
+      <body className="min-h-[100dvh] flex flex-col bg-obsidian text-cream antialiased">
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

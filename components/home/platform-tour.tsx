@@ -98,7 +98,7 @@ export function PlatformTour() {
     <Section className="py-24 md:py-32" id="tour">
       <div className="max-w-[58ch] mb-12 md:mb-16">
         <MonoLabel tone="accent">A tour of the platform</MonoLabel>
-        <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
+        <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
           Six surfaces.{" "}
           <span className="italic text-fog/80">Every one of them yours.</span>
         </h2>
@@ -158,7 +158,7 @@ export function PlatformTour() {
           <div className="p-8 md:p-12 flex flex-col gap-7 order-1 lg:order-2">
             <div>
               <MonoLabel tone="accent">{active.label}</MonoLabel>
-              <h3 className="mt-4 font-display text-[clamp(1.5rem,2.4vw,2.25rem)] leading-[1.08] tracking-[-0.02em] max-w-[26ch]">
+              <h3 className="mt-4 font-sans font-semibold tracking-tight text-[clamp(1.5rem,2.4vw,2.25rem)] leading-[1.08] tracking-[-0.02em] max-w-[26ch]">
                 {active.title}
               </h3>
               <p className="mt-5 text-[15px] leading-[1.6] text-cream/70 max-w-[52ch]">

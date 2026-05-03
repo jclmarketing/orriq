@@ -32,7 +32,7 @@ export function Team() {
     <Section className="py-28 md:py-36" id="team">
       <div className="max-w-[58ch] mb-14 md:mb-20">
         <Eyebrow>Meet the team</Eyebrow>
-        <h2 className="mt-6 font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
+        <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
           Built by operators,{" "}
           <span className="italic text-fog/80">not account managers.</span>
         </h2>
@@ -60,7 +60,7 @@ export function Team() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="font-display text-[120px] tracking-[-0.04em] text-cream/10">
+                  <div className="font-sans font-semibold tracking-tight text-[120px] tracking-[-0.04em] text-cream/10">
                     {m.initials}
                   </div>
                 </div>
@@ -75,7 +75,7 @@ export function Team() {
               <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyan/80">
                 {m.role}
               </div>
-              <h3 className="mt-3 font-display text-[clamp(1.6rem,2.4vw,2.25rem)] leading-[1.05] tracking-[-0.02em]">
+              <h3 className="mt-3 font-sans font-semibold tracking-tight text-[clamp(1.6rem,2.4vw,2.25rem)] leading-[1.05] tracking-[-0.02em]">
                 {m.name}
               </h3>
               <p className="mt-4 text-[14.5px] leading-[1.6] text-cream/70 max-w-[48ch]">

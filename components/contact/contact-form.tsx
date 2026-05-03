@@ -18,7 +18,7 @@ export function ContactForm() {
         <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan">
           Message received
         </div>
-        <div className="mt-4 font-display text-[28px] tracking-[-0.02em] leading-tight">
+        <div className="mt-4 font-sans font-semibold tracking-tight text-[28px] tracking-[-0.02em] leading-tight">
           Thanks — we'll reply within a working day.
         </div>
         <p className="mt-4 text-[15px] text-cream/70 max-w-[46ch]">

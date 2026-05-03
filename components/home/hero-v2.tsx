@@ -1,70 +1,61 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/shared/button";
-import { GradientOrb } from "@/components/shared/gradient-orb";
 import { DotGrid } from "@/components/shared/dot-grid";
 import { MonoLabel } from "@/components/shared/mono-label";
 import { ArrowUpRight } from "lucide-react";
 
 export function HeroV2() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-0 md:pt-32">
-      <DotGrid className="opacity-60" />
+    <section className="relative overflow-hidden pt-24 md:pt-28 pb-0">
+      <DotGrid className="opacity-50" />
 
       <div aria-hidden className="absolute inset-0 pointer-events-none">
-        <GradientOrb
-          variant="violet"
-          className="h-[700px] w-[700px] -top-40 -left-20 opacity-40"
-        />
-        <GradientOrb
-          variant="cyan"
-          className="h-[600px] w-[600px] top-40 -right-32 opacity-35"
-        />
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[700px] w-[1100px] rounded-full glow-cyan opacity-60 anim-pulse-slow" />
+        <div className="absolute top-40 -right-40 h-[500px] w-[500px] rounded-full glow-violet opacity-50 anim-pulse-slow" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 md:px-10 lg:px-14">
-        <div className="flex flex-col items-center text-center gap-7 max-w-[58ch] mx-auto pt-12 pb-12 md:pt-14 md:pb-16">
+        <div className="flex flex-col items-center text-center gap-7 max-w-[60ch] mx-auto pt-8 pb-10 md:pt-10 md:pb-14">
           <Link
             href="/work/jcl-crm"
-            className="group inline-flex items-center gap-3 rounded-full hairline bg-white/[0.03] px-3.5 py-1.5 backdrop-blur-sm hover:bg-white/[0.06] transition-colors anim-fade-up"
+            className="group inline-flex items-center gap-3 rounded-full glass px-3.5 py-1.5 anim-fade-up"
           >
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full rounded-full bg-cyan opacity-60 animate-ping" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan" />
             </span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/80">
-              v0.7 — JCL CRM multi-tenant core shipped
+            <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-cream/85">
+              v0.7 · JCL CRM multi-tenant core shipped
             </span>
             <ArrowUpRight className="h-3.5 w-3.5 text-cream/60 group-hover:text-cream transition-colors" />
           </Link>
 
           <h1
-            className="font-display text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-[-0.035em] text-cream anim-fade-up"
+            className="anim-fade-up text-[clamp(2.5rem,6.5vw,5.75rem)] leading-[0.95] tracking-[-0.04em] text-cream font-semibold"
             style={{ animationDelay: "60ms" }}
           >
-            The operating system{" "}
-            <span className="block italic text-gradient-accent">
-              your business
-            </span>
-            <span className="block">should already be running.</span>
+            The{" "}
+            <span className="text-gradient-cyan">operating system</span>{" "}
+            your business{" "}
+            <span className="text-fog">should already be running.</span>
           </h1>
 
           <p
-            className="max-w-[60ch] text-[16px] md:text-[18px] leading-[1.55] text-cream/75 anim-fade-up"
+            className="anim-fade-up max-w-[58ch] text-[16.5px] md:text-[18px] leading-[1.55] text-cream/70 font-normal"
             style={{ animationDelay: "140ms" }}
           >
             Orriq is the bespoke CRM, AI, and automation layer that replaces
             the patchwork of generic SaaS your business is duct-taped together
-            with. One platform. Your schema. Your data. Built for you, owned
-            by you.
+            with. One platform. Your schema. Your data.
           </p>
 
           <div
-            className="flex flex-wrap items-center justify-center gap-3 anim-fade-up"
+            className="anim-fade-up flex flex-wrap items-center justify-center gap-3"
             style={{ animationDelay: "220ms" }}
           >
             <Button href="/get-started" size="lg" trailingArrow>
-              Start a build
+              Book a 30-min scope call
             </Button>
             <Button href="#tour" variant="secondary" size="lg">
               See the platform
@@ -72,32 +63,33 @@ export function HeroV2() {
           </div>
 
           <div
-            className="anim-fade-up flex items-center justify-center gap-x-2 gap-y-2 flex-wrap pt-2"
+            className="anim-fade-up flex flex-wrap items-center justify-center gap-x-5 gap-y-2 pt-3 text-fog font-mono text-[10.5px] uppercase tracking-[0.18em]"
             style={{ animationDelay: "300ms" }}
           >
-            {[
-              { l: "O", w: "Observe" },
-              { l: "R", w: "Reveal" },
-              { l: "R", w: "Reactivate" },
-              { l: "I", w: "Integrate" },
-              { l: "Q", w: "Quantify" },
-            ].map((s, i, a) => (
-              <span key={i} className="inline-flex items-center gap-2">
-                <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-fog">
-                  <span className="text-cyan">{s.l}</span>
-                  <span className="text-fog/80">{s.w.slice(1)}</span>
-                </span>
-                {i < a.length - 1 && (
-                  <span className="text-fog-2 font-mono text-[10px]">·</span>
-                )}
-              </span>
-            ))}
+            <span className="inline-flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
+              7 systems shipped
+            </span>
+            <span className="text-fog-2">·</span>
+            <span>30-day live, or you don't pay</span>
+            <span className="text-fog-2">·</span>
+            <span>You own the code</span>
           </div>
         </div>
 
-        <div className="relative mx-auto max-w-[1100px] anim-fade-up" style={{ animationDelay: "380ms" }}>
-          <div className="absolute -inset-px rounded-3xl bg-gradient-to-tr from-violet/20 via-transparent to-cyan/20 blur-md" />
-          <div className="relative rounded-3xl hairline-strong overflow-hidden bg-obsidian-2 shadow-[0_30px_120px_-30px_rgba(124,58,237,0.4)]">
+        <div
+          className="relative mx-auto max-w-[1100px] anim-fade-up"
+          style={{ animationDelay: "380ms" }}
+        >
+          <div
+            aria-hidden
+            className="absolute -inset-8 rounded-[40px] opacity-50 blur-3xl"
+            style={{
+              background:
+                "radial-gradient(60% 50% at 50% 50%, rgba(34,211,238,0.5) 0%, rgba(167,139,250,0.25) 40%, transparent 75%)",
+            }}
+          />
+          <div className="relative rounded-2xl md:rounded-3xl glass-strong overflow-hidden shadow-glow-soft">
             <Image
               src="/assets/hero-dashboard.png"
               alt="Orriq operating system dashboard"
@@ -108,20 +100,22 @@ export function HeroV2() {
             />
             <div
               aria-hidden
-              className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent pointer-events-none"
+              className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent pointer-events-none"
             />
           </div>
 
           <div className="absolute -bottom-3 left-6 md:left-10">
-            <MonoLabel withDot tone="live">Live operator dashboard · demo data</MonoLabel>
+            <div className="glass rounded-full px-3 py-1.5">
+              <MonoLabel withDot tone="live">Live operator dashboard · demo data</MonoLabel>
+            </div>
           </div>
         </div>
 
-        <div className="mt-24 md:mt-32 pb-12">
-          <p className="text-center font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-2 mb-8">
+        <div className="mt-20 md:mt-28 pb-14">
+          <p className="text-center font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-2 mb-7">
             Operating systems live for
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-y-6 gap-x-4 items-center justify-items-center opacity-70">
+          <div className="flex flex-wrap items-center justify-center gap-2">
             {[
               "Manufacturing",
               "Trades",
@@ -133,7 +127,7 @@ export function HeroV2() {
             ].map((label) => (
               <div
                 key={label}
-                className="font-display text-[14px] md:text-[15px] text-cream/70 tracking-[-0.01em]"
+                className="glass rounded-full px-4 py-2 text-[13px] font-medium text-cream/80"
               >
                 {label}
               </div>
@@ -141,8 +135,6 @@ export function HeroV2() {
           </div>
         </div>
       </div>
-
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-obsidian pointer-events-none" />
     </section>
   );
 }

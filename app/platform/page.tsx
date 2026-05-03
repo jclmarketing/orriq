@@ -91,7 +91,7 @@ export default function PlatformPage() {
         />
         <Section>
           <Eyebrow tone="accent">Platform</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[18ch]">
+          <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[18ch]">
             A modern infrastructure stack, in the{" "}
             <span className="italic text-gradient-accent">shape of you.</span>
           </h1>
@@ -129,12 +129,12 @@ export default function PlatformPage() {
               <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fog-2">
                 Layer {l.idx}
               </div>
-              <div className="mt-3 font-display text-[20px] tracking-[-0.01em] text-cream/90">
+              <div className="mt-3 font-sans font-semibold tracking-tight text-[20px] tracking-[-0.01em] text-cream/90">
                 {l.name}
               </div>
             </div>
             <div className="md:col-span-8">
-              <h2 className="font-display text-[clamp(1.8rem,3.2vw,2.75rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
+              <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.2vw,2.75rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
                 {l.heading}
               </h2>
               <p className="mt-6 max-w-[60ch] text-[16px] leading-[1.6] text-cream/70">
@@ -156,7 +156,7 @@ export default function PlatformPage() {
         <div className="mb-10 flex items-end justify-between flex-wrap gap-4">
           <div>
             <Eyebrow>Stack</Eyebrow>
-            <h2 className="mt-6 font-display text-[clamp(2rem,3.6vw,3rem)] leading-[1.02] tracking-[-0.03em] max-w-[20ch]">
+            <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.6vw,3rem)] leading-[1.02] tracking-[-0.03em] max-w-[20ch]">
               Fourteen primitives. One coherent platform.
             </h2>
           </div>
@@ -167,7 +167,7 @@ export default function PlatformPage() {
               key={i.name}
               className="bg-obsidian p-5 aspect-[5/3] flex flex-col items-center justify-center text-center"
             >
-              <span className="font-display text-[15px] tracking-[-0.01em] text-cream/90">
+              <span className="font-sans font-semibold tracking-tight text-[15px] tracking-[-0.01em] text-cream/90">
                 {i.name}
               </span>
               <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-fog-2">
@@ -185,7 +185,7 @@ export default function PlatformPage() {
             className="h-[400px] w-[400px] -bottom-20 -right-10 opacity-60"
           />
           <div className="relative">
-            <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
+            <h2 className="font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
               Want to see it running?
             </h2>
             <p className="mt-6 max-w-[52ch] text-[16px] text-cream/75 leading-relaxed">

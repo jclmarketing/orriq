@@ -59,7 +59,7 @@ export default function GetStartedPage() {
         <GradientOrb variant="violet" className="h-[480px] w-[480px] -top-20 left-1/3 opacity-40" />
         <Section>
           <Eyebrow tone="accent">Get started</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[18ch]">
+          <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[18ch]">
             Start a build.
           </h1>
           <p className="mt-8 max-w-[62ch] text-[17px] leading-[1.6] text-cream/75">
@@ -85,7 +85,7 @@ export default function GetStartedPage() {
       <Section className="py-20 md:py-28">
         <div className="mb-14">
           <Eyebrow>How it works</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em] max-w-[20ch]">
+          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em] max-w-[20ch]">
             Four phases. No surprises.
           </h2>
         </div>
@@ -99,7 +99,7 @@ export default function GetStartedPage() {
                 <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fog-2">
                   {p.idx} · {p.duration}
                 </div>
-                <div className="mt-2 font-display text-[28px] tracking-[-0.02em]">
+                <div className="mt-2 font-sans font-semibold tracking-tight text-[28px] tracking-[-0.02em]">
                   {p.title}
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function GetStartedPage() {
       <Section className="py-20">
         <div className="text-center max-w-[52ch] mx-auto">
           <Eyebrow className="justify-center" tone="accent">Pricing, briefly</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
+          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
             Fixed-scope builds. Fixed monthly retainers. No per-seat tax.
           </h2>
           <p className="mt-6 max-w-[52ch] mx-auto text-[16px] leading-relaxed text-cream/70">

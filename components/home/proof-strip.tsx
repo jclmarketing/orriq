@@ -18,7 +18,7 @@ export function ProofStrip() {
             key={i.name}
             className="group relative aspect-[5/3] bg-obsidian flex flex-col items-center justify-center p-4 hover:bg-obsidian-2 transition-colors"
           >
-            <span className="font-display text-[15px] tracking-[-0.01em] text-cream/90">
+            <span className="font-sans font-semibold tracking-tight text-[15px] tracking-[-0.01em] text-cream/90">
               {i.name}
             </span>
             <span className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-fog-2">

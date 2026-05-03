@@ -24,7 +24,7 @@ export function TechCarousel() {
     <Section className="py-24 md:py-28" bleed={false}>
       <div className="text-center max-w-[60ch] mx-auto mb-12">
         <Eyebrow className="justify-center">Built with modern infrastructure</Eyebrow>
-        <h2 className="mt-6 font-display text-[clamp(1.6rem,2.6vw,2.5rem)] leading-[1.06] tracking-[-0.025em]">
+        <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(1.6rem,2.6vw,2.5rem)] leading-[1.06] tracking-[-0.025em]">
           The tools behind serious business systems.
         </h2>
         <p className="mt-5 text-[15px] leading-[1.6] text-cream/65">
@@ -50,7 +50,7 @@ export function TechCarousel() {
                 key={`${s.name}-${i}`}
                 className="shrink-0 hairline rounded-full px-5 py-3 bg-white/[0.02] hover:bg-white/[0.05] transition-colors flex items-center gap-3"
               >
-                <span className="font-display text-[15px] tracking-[-0.01em] text-cream/90">
+                <span className="font-sans font-semibold tracking-tight text-[15px] tracking-[-0.01em] text-cream/90">
                   {s.name}
                 </span>
                 <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-fog-2">

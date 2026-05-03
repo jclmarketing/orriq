@@ -47,7 +47,7 @@ export function FAQ() {
       <div className="grid md:grid-cols-12 gap-10 md:gap-16">
         <div className="md:col-span-4">
           <MonoLabel tone="accent">FAQ</MonoLabel>
-          <h2 className="mt-5 font-display text-[clamp(2rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
+          <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
             Questions we hear{" "}
             <span className="italic text-fog/80">before every build.</span>
           </h2>
@@ -69,7 +69,7 @@ export function FAQ() {
                     onClick={() => setOpen(isOpen ? null : i)}
                     className="w-full text-left px-6 md:px-8 py-5 md:py-6 flex items-center justify-between gap-6 group"
                   >
-                    <span className="font-display text-[16.5px] md:text-[17.5px] leading-[1.35] tracking-[-0.01em] text-cream group-hover:text-cream">
+                    <span className="font-sans font-semibold tracking-tight text-[16.5px] md:text-[17.5px] leading-[1.35] tracking-[-0.01em] text-cream group-hover:text-cream">
                       {qa.q}
                     </span>
                     <span

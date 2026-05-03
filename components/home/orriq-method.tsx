@@ -60,7 +60,7 @@ export function OrriqMethod() {
     <Section className="py-28 md:py-36" id="method">
       <div className="max-w-[60ch] mb-16 md:mb-20">
         <Eyebrow tone="accent">The ORRIQ Method</Eyebrow>
-        <h2 className="mt-6 font-display text-[clamp(2rem,4vw,3.75rem)] leading-[1.02] tracking-[-0.03em]">
+        <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.75rem)] leading-[1.02] tracking-[-0.03em]">
           Observe.{" "}
           <span className="italic text-fog/80">Reveal.</span>{" "}
           Reactivate.{" "}
@@ -82,7 +82,7 @@ export function OrriqMethod() {
           >
             <div
               aria-hidden
-              className="absolute -top-4 right-2 font-display text-[160px] leading-none tracking-[-0.05em] text-cream/[0.04] select-none pointer-events-none group-hover:text-cream/[0.07] transition-colors"
+              className="absolute -top-4 right-2 font-sans font-semibold tracking-tight text-[160px] leading-none tracking-[-0.05em] text-cream/[0.04] select-none pointer-events-none group-hover:text-cream/[0.07] transition-colors"
             >
               {step.letter}
             </div>
@@ -109,7 +109,7 @@ export function OrriqMethod() {
                 </div>
               </div>
 
-              <h3 className="mt-7 font-display text-[26px] leading-[1.05] tracking-[-0.02em]">
+              <h3 className="mt-7 font-sans font-semibold tracking-tight text-[26px] leading-[1.05] tracking-[-0.02em]">
                 {step.word}
               </h3>
               <p className="mt-4 text-[14px] leading-[1.6] text-cream/70 max-w-[40ch]">

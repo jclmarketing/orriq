@@ -7,7 +7,7 @@ export function Thesis() {
       <div className="grid gap-12 md:grid-cols-12">
         <div className="md:col-span-4">
           <Eyebrow>The thesis</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2rem,3.6vw,3.25rem)] leading-[1.02] tracking-[-0.03em]">
+          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.6vw,3.25rem)] leading-[1.02] tracking-[-0.03em]">
             Generic tools <br />
             produce <span className="italic text-fog">generic</span> <br />
             businesses.

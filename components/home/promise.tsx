@@ -37,7 +37,7 @@ export function Promise() {
         <MonoLabel tone="accent" withDot>
           The promise
         </MonoLabel>
-        <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
+        <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
           Live in 30 days.{" "}
           <span className="italic text-gradient-accent">Or you don't pay.</span>
         </h2>
@@ -57,7 +57,7 @@ export function Promise() {
             <div className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-cyan/80">
               {p.when}
             </div>
-            <div className="font-display text-[18px] leading-[1.15] tracking-[-0.015em] mt-1">
+            <div className="font-sans font-semibold tracking-tight text-[18px] leading-[1.15] tracking-[-0.015em] mt-1">
               {p.title}
             </div>
             <p className="text-[13px] leading-[1.55] text-cream/65 mt-1">

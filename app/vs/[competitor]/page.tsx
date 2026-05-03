@@ -48,12 +48,12 @@ export default async function VsPage({
           <div className="mt-10">
             <Eyebrow tone="accent">Compare</Eyebrow>
             <div className="mt-6 flex items-center gap-4 flex-wrap">
-              <h1 className="font-display text-[clamp(2.75rem,6.5vw,6rem)] leading-[0.95] tracking-[-0.035em]">
+              <h1 className="font-sans font-semibold tracking-tight text-[clamp(2.75rem,6.5vw,6rem)] leading-[0.95] tracking-[-0.035em]">
                 <span className="text-gradient-accent italic">Orriq</span>{" "}
                 <span className="text-fog">vs</span> {c.name}
               </h1>
             </div>
-            <p className="mt-10 max-w-[62ch] text-[19px] md:text-[22px] leading-[1.5] text-cream/85 font-display tracking-[-0.015em]">
+            <p className="mt-10 max-w-[62ch] text-[19px] md:text-[22px] leading-[1.5] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.015em]">
               {c.hook}
             </p>
           </div>
@@ -102,7 +102,7 @@ export default async function VsPage({
             <Eyebrow>Our verdict</Eyebrow>
           </div>
           <div className="md:col-span-8">
-            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-display tracking-[-0.01em] max-w-[58ch]">
+            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
               {c.verdict}
             </p>
           </div>
@@ -133,7 +133,7 @@ export default async function VsPage({
         <div className="relative overflow-hidden rounded-3xl hairline-strong bg-obsidian-2 p-10 md:p-16">
           <GradientOrb variant="mixed" className="h-[400px] w-[400px] -top-20 -right-20 opacity-60" />
           <div className="relative">
-            <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
+            <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
               Already on {c.name}? <br />
               We do migrations.
             </h2>

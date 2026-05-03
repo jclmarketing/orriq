@@ -37,7 +37,7 @@ export default function AboutPage() {
         <GradientOrb variant="mixed" className="h-[500px] w-[500px] -top-20 right-0 opacity-40" />
         <Section>
           <Eyebrow>About</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[22ch]">
+          <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[22ch]">
             Built by an agency that got tired of renting software.
           </h1>
         </Section>
@@ -74,14 +74,14 @@ export default function AboutPage() {
       <Section className="py-20 md:py-28">
         <div className="mb-14">
           <Eyebrow>How we work</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
+          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
             Four principles. Non-negotiable.
           </h2>
         </div>
         <div className="grid gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06] md:grid-cols-2">
           {principles.map((p) => (
             <div key={p.title} className="bg-obsidian p-8 md:p-10">
-              <h3 className="font-display text-[22px] leading-tight tracking-[-0.02em]">
+              <h3 className="font-sans font-semibold tracking-tight text-[22px] leading-tight tracking-[-0.02em]">
                 {p.title}
               </h3>
               <p className="mt-4 text-[15px] leading-[1.6] text-cream/70 max-w-[46ch]">
@@ -121,7 +121,7 @@ export default function AboutPage() {
 
       <Section className="py-20">
         <div className="text-center max-w-[52ch] mx-auto">
-          <h2 className="font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
+          <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
             Want to work together?
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

@@ -111,7 +111,7 @@ export function Showcase() {
       <div className="mx-auto w-full max-w-[1240px] px-6 md:px-10 lg:px-14 pt-28 md:pt-36 pb-20">
         <div className="max-w-[60ch] mb-14">
           <Eyebrow tone="accent">Operating systems we've already shipped</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2rem,4vw,3.75rem)] leading-[1.02] tracking-[-0.03em]">
+          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.75rem)] leading-[1.02] tracking-[-0.03em]">
             <span>Real CRM screens.</span>{" "}
             <span className="italic text-fog">Real workflows. Real business processes.</span>
           </h2>
@@ -174,7 +174,7 @@ export function Showcase() {
                     {f.tag}
                   </span>
                 </div>
-                <h3 className="mt-4 font-display text-[clamp(1.6rem,2.6vw,2.25rem)] leading-[1.08] tracking-[-0.025em] max-w-[22ch]">
+                <h3 className="mt-4 font-sans font-semibold tracking-tight text-[clamp(1.6rem,2.6vw,2.25rem)] leading-[1.08] tracking-[-0.025em] max-w-[22ch]">
                   {f.title}
                 </h3>
                 <p className="mt-5 text-[15.5px] md:text-[16px] leading-[1.65] text-cream/70 max-w-[52ch]">

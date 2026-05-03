@@ -44,7 +44,7 @@ export function Hero() {
           </Link>
 
           <h1
-            className="font-display max-w-[16ch] text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-[-0.035em] text-cream anim-fade-up"
+            className="font-sans font-semibold tracking-tight max-w-[16ch] text-[clamp(2.75rem,7vw,6.5rem)] leading-[0.95] tracking-[-0.035em] text-cream anim-fade-up"
             style={{ animationDelay: "80ms" }}
           >
             Software built around{" "}
@@ -82,7 +82,7 @@ export function Hero() {
             {["Observe", "Reveal", "Reactivate", "Integrate", "Quantify"].map(
               (w, i) => (
                 <div key={w} className="flex items-center gap-3">
-                  <span className="font-display text-[22px] leading-none tracking-[-0.02em] text-gradient-accent">
+                  <span className="font-sans font-semibold tracking-tight text-[22px] leading-none tracking-[-0.02em] text-gradient-accent">
                     {w[0]}
                   </span>
                   <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cream/70">

@@ -13,7 +13,7 @@ export function CaseStudiesPreview() {
       <div className="flex flex-col gap-4 mb-16 md:mb-20 md:flex-row md:items-end md:justify-between">
         <div>
           <Eyebrow>Proof</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
+          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
             Five builds. Five businesses we rebuilt around.
           </h2>
         </div>
@@ -47,7 +47,7 @@ export function CaseStudiesPreview() {
                   <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-fog">
                     {c.industry}
                   </div>
-                  <h3 className="mt-3 font-display text-[clamp(1.4rem,2.2vw,2rem)] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
+                  <h3 className="mt-3 font-sans font-semibold tracking-tight text-[clamp(1.4rem,2.2vw,2rem)] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
                     {c.headline}
                   </h3>
                 </div>
@@ -59,7 +59,7 @@ export function CaseStudiesPreview() {
               <div className="mt-6 flex flex-wrap gap-4 md:gap-8">
                 {c.metrics.map((m) => (
                   <div key={m.label} className="border-l border-white/10 pl-3">
-                    <div className="font-display text-[18px] tracking-[-0.01em]">
+                    <div className="font-sans font-semibold tracking-tight text-[18px] tracking-[-0.01em]">
                       {m.value}
                     </div>
                     <div className="font-mono text-[10px] uppercase tracking-[0.12em] text-fog">

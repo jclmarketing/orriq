@@ -39,7 +39,7 @@ export function Industries() {
       <div className="relative">
         <div className="max-w-[60ch] mb-14 md:mb-16">
           <MonoLabel tone="accent">Industries</MonoLabel>
-          <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
+          <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
             Built where{" "}
             <span className="italic text-fog/80">complexity lives.</span>
           </h2>
@@ -58,7 +58,7 @@ export function Industries() {
             >
               <div className="h-1.5 w-6 rounded-full bg-gradient-accent opacity-70" />
               <div>
-                <div className="font-display text-[15px] leading-tight tracking-[-0.01em]">
+                <div className="font-sans font-semibold tracking-tight text-[15px] leading-tight tracking-[-0.01em]">
                   {s.name}
                 </div>
                 <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-fog-2 leading-[1.4]">
@@ -78,7 +78,7 @@ export function Industries() {
               {[...partners, ...partners].map((p, i) => (
                 <div
                   key={`${p}-${i}`}
-                  className="shrink-0 font-display text-[18px] md:text-[20px] tracking-[-0.01em] text-cream/55 hover:text-cream/90 transition-colors"
+                  className="shrink-0 font-sans font-semibold tracking-tight text-[18px] md:text-[20px] tracking-[-0.01em] text-cream/55 hover:text-cream/90 transition-colors"
                 >
                   {p}
                 </div>

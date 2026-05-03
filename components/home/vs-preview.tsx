@@ -9,7 +9,7 @@ export function VsPreview() {
     <Section className="py-28 md:py-36">
       <div className="max-w-[52ch] mb-14 md:mb-20">
         <Eyebrow tone="accent">Compare</Eyebrow>
-        <h2 className="mt-6 font-display text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
+        <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
           Already using{" "}
           <span className="italic text-gradient-accent">something generic</span>?
         </h2>
@@ -30,7 +30,7 @@ export function VsPreview() {
               <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-fog-2">
                 vs
               </div>
-              <div className="mt-2 font-display text-[clamp(1.4rem,2.2vw,2rem)] tracking-[-0.02em]">
+              <div className="mt-2 font-sans font-semibold tracking-tight text-[clamp(1.4rem,2.2vw,2rem)] tracking-[-0.02em]">
                 {c.name}
               </div>
             </div>

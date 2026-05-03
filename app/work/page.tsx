@@ -24,7 +24,7 @@ export default function WorkIndex() {
         />
         <Section>
           <Eyebrow>Work</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[20ch]">
+          <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[20ch]">
             Five businesses. <br />
             Five <span className="italic text-gradient-accent">different shapes.</span>
           </h1>
@@ -61,7 +61,7 @@ export default function WorkIndex() {
                 <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-fog">
                   {c.industry} · {c.year}
                 </div>
-                <h2 className="mt-4 font-display text-[clamp(1.8rem,3vw,2.5rem)] leading-[1.04] tracking-[-0.025em] max-w-[20ch] group-hover:text-cream">
+                <h2 className="mt-4 font-sans font-semibold tracking-tight text-[clamp(1.8rem,3vw,2.5rem)] leading-[1.04] tracking-[-0.025em] max-w-[20ch] group-hover:text-cream">
                   {c.headline}
                 </h2>
                 <p className="mt-5 text-[15.5px] leading-[1.65] text-cream/70 max-w-[52ch]">

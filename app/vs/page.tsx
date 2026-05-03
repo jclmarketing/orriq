@@ -20,7 +20,7 @@ export default function VsIndex() {
         <GradientOrb variant="violet" className="h-[500px] w-[500px] -top-20 left-1/2 opacity-30" />
         <Section>
           <Eyebrow tone="accent">Compare</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[20ch]">
+          <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[20ch]">
             Honest reads on <span className="italic text-gradient-accent">every alternative.</span>
           </h1>
           <p className="mt-8 max-w-[62ch] text-[17px] leading-[1.6] text-cream/75">
@@ -42,7 +42,7 @@ export default function VsIndex() {
               <div>
                 <div className="flex items-baseline gap-3">
                   <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-fog-2">vs</span>
-                  <span className="font-display text-[clamp(1.8rem,3vw,2.5rem)] tracking-[-0.02em]">{c.name}</span>
+                  <span className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3vw,2.5rem)] tracking-[-0.02em]">{c.name}</span>
                 </div>
                 <p className="mt-5 text-[15px] text-cream/70 leading-[1.6] max-w-[46ch]">
                   {c.pitch}

@@ -40,7 +40,7 @@ export default function ContactPage() {
         <GradientOrb variant="cyan" className="h-[480px] w-[480px] -top-20 right-10 opacity-30" />
         <Section>
           <Eyebrow>Contact</Eyebrow>
-          <h1 className="mt-6 font-display text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[18ch]">
+          <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[18ch]">
             Tell us what you want <span className="italic text-gradient-accent">built.</span>
           </h1>
           <p className="mt-8 max-w-[58ch] text-[17px] leading-[1.6] text-cream/75">
@@ -78,7 +78,7 @@ export default function ContactPage() {
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-4">
             <Eyebrow tone="accent">Message</Eyebrow>
-            <h2 className="mt-6 font-display text-[clamp(1.8rem,3vw,2.5rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
+            <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(1.8rem,3vw,2.5rem)] leading-[1.04] tracking-[-0.025em] max-w-[22ch]">
               Tell us a little about what you run today.
             </h2>
             <p className="mt-5 text-[14.5px] text-cream/65 leading-relaxed max-w-[42ch]">

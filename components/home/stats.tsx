@@ -21,7 +21,7 @@ export function Stats() {
         <MonoLabel withDot tone="live">
           Live · production
         </MonoLabel>
-        <h2 className="mt-5 font-display text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
+        <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
           Real numbers from{" "}
           <span className="italic text-fog/80">real builds.</span>
         </h2>
@@ -33,7 +33,7 @@ export function Stats() {
             key={s.label}
             className="bg-obsidian p-7 md:p-8 flex flex-col gap-3"
           >
-            <div className="font-display text-[clamp(2.5rem,4vw,3.5rem)] leading-none tracking-[-0.025em] text-gradient-accent">
+            <div className="font-sans font-semibold tracking-tight text-[clamp(2.5rem,4vw,3.5rem)] leading-none tracking-[-0.025em] text-gradient-accent">
               {s.value}
             </div>
             <div className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-cyan/80">

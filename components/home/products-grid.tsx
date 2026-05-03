@@ -98,7 +98,7 @@ export function ProductsGrid() {
           <MonoLabel tone="accent" withDot>
             Products
           </MonoLabel>
-          <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
+          <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
             Six modules.{" "}
             <span className="italic text-fog/80">One operating layer.</span>
           </h2>
@@ -134,7 +134,7 @@ export function ProductsGrid() {
               </div>
               <ArrowUpRight className="h-4 w-4 text-fog group-hover:text-cream transition-colors" />
             </div>
-            <h3 className="relative font-display text-[22px] leading-[1.1] tracking-[-0.02em]">
+            <h3 className="relative font-sans font-semibold tracking-tight text-[22px] leading-[1.1] tracking-[-0.02em]">
               {p.name}
             </h3>
             <p className="relative mt-2 text-[14.5px] text-cream/65 leading-snug max-w-[42ch]">

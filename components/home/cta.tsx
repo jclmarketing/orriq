@@ -22,7 +22,7 @@ export function CTA() {
 
         <div className="relative z-10 px-8 py-20 md:px-16 md:py-28 lg:py-32 grid gap-10 md:grid-cols-12 items-center">
           <div className="md:col-span-8">
-            <h2 className="font-display text-[clamp(2.25rem,5vw,4.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[20ch]">
+            <h2 className="font-sans font-semibold tracking-tight text-[clamp(2.25rem,5vw,4.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[20ch]">
               Let's build the <span className="italic text-gradient-accent">shape</span> your business deserves.
             </h2>
             <p className="mt-6 max-w-[56ch] text-[16px] md:text-[17px] leading-[1.6] text-cream/75">

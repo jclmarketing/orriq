@@ -32,7 +32,7 @@ export function PlatformPreview() {
       <div className="flex flex-col gap-4 mb-16 md:mb-20 md:flex-row md:items-end md:justify-between">
         <div className="max-w-[64ch]">
           <Eyebrow tone="accent">The platform</Eyebrow>
-          <h2 className="mt-6 font-display text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[20ch]">
+          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[20ch]">
             One operating layer behind the whole business.
           </h2>
           <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70 max-w-[58ch]">
@@ -61,7 +61,7 @@ export function PlatformPreview() {
                 </div>
               </div>
               <div>
-                <h3 className="font-display text-[22px] leading-tight tracking-[-0.02em]">
+                <h3 className="font-sans font-semibold tracking-tight text-[22px] leading-tight tracking-[-0.02em]">
                   {p.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-[1.6] text-cream/70 max-w-[46ch]">

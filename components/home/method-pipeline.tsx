@@ -50,7 +50,7 @@ export function MethodPipeline() {
         <MonoLabel tone="accent" className="justify-center">
           The ORRIQ Method
         </MonoLabel>
-        <h2 className="mt-5 font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.04] tracking-[-0.03em]">
+        <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.04] tracking-[-0.03em]">
           A repeatable system,{" "}
           <span className="italic text-fog/80">end to end.</span>
         </h2>
@@ -90,7 +90,7 @@ export function MethodPipeline() {
               <div className="mt-6 font-mono text-[10.5px] uppercase tracking-[0.24em] text-fog-2">
                 Step 0{i + 1}
               </div>
-              <h3 className="mt-2 font-display text-[22px] leading-tight tracking-[-0.02em] flex items-baseline gap-2">
+              <h3 className="mt-2 font-sans font-semibold tracking-tight text-[22px] leading-tight tracking-[-0.02em] flex items-baseline gap-2">
                 <span className="text-gradient-accent text-[28px] leading-none">
                   {s.letter}
                 </span>
