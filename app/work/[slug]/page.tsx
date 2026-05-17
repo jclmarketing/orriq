@@ -7,6 +7,7 @@ import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { Button } from "@/components/shared/button";
 import { GradientOrb } from "@/components/shared/gradient-orb";
+import { Reveal } from "@/components/shared/reveal";
 import { ArrowUpRight } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -71,79 +72,90 @@ export default async function CaseStudyPage({
         </Section>
       </section>
 
-      <Section className="pb-16">
-        <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2 aspect-[16/9]">
-          <Image
-            src={study.image}
-            alt={study.client}
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-        </div>
-      </Section>
+      <Reveal intensity="strong">
+        <Section className="pb-16">
+          <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2 aspect-[16/9]">
+            <Image
+              src={study.image}
+              alt={study.client}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </Section>
+      </Reveal>
 
-      <Section className="py-16 md:py-24">
-        <div className="grid gap-10 md:grid-cols-3">
-          {study.metrics.map((m) => (
-            <div key={m.label} className="border-l border-white/10 pl-5">
-              <div className="font-sans font-semibold tracking-tight text-[clamp(2rem,3vw,2.5rem)] tracking-[-0.02em]">
-                {m.value}
+      <Reveal>
+        <Section className="py-16 md:py-24">
+          <div className="grid gap-10 md:grid-cols-3">
+            {study.metrics.map((m) => (
+              <div key={m.label} className="border-l border-white/10 pl-5">
+                <div className="font-sans font-semibold tracking-tight text-[clamp(2rem,3vw,2.5rem)] tracking-[-0.02em]">
+                  {m.value}
+                </div>
+                <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-fog">
+                  {m.label}
+                </div>
               </div>
-              <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-fog">
-                {m.label}
-              </div>
+            ))}
+          </div>
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section className="py-16 md:py-24">
+          <div className="grid gap-12 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <Eyebrow>The challenge</Eyebrow>
             </div>
-          ))}
-        </div>
-      </Section>
+            <div className="md:col-span-8">
+              <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
+                {study.challenge}
+              </p>
+            </div>
+          </div>
+        </Section>
+      </Reveal>
 
-      <Section className="py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <Eyebrow>The challenge</Eyebrow>
+      <Reveal>
+        <Section className="py-16 md:py-24">
+          <div className="grid gap-12 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <Eyebrow tone="accent">The build</Eyebrow>
+            </div>
+            <div className="md:col-span-8">
+              <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
+                {study.solution}
+              </p>
+            </div>
           </div>
-          <div className="md:col-span-8">
-            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
-              {study.challenge}
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      <Section className="py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <Eyebrow tone="accent">The build</Eyebrow>
-          </div>
-          <div className="md:col-span-8">
-            <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
-              {study.solution}
-            </p>
-          </div>
-        </div>
-      </Section>
+        </Section>
+      </Reveal>
 
       {study.uiMockup && (
-        <Section className="py-10 md:py-20">
-          <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2">
-            <Image
-              src={study.uiMockup}
-              alt={`${study.client} UI screen`}
-              width={2240}
-              height={1260}
-              className="w-full h-auto"
-            />
-            <div aria-hidden className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-obsidian/20 via-transparent to-transparent" />
-          </div>
-          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-fog-2 text-center">
-            Platform screenshot · demo data
-          </p>
-        </Section>
+        <Reveal intensity="strong">
+          <Section className="py-10 md:py-20">
+            <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2">
+              <Image
+                src={study.uiMockup}
+                alt={`${study.client} UI screen`}
+                width={2240}
+                height={1260}
+                className="w-full h-auto"
+              />
+              <div aria-hidden className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-obsidian/20 via-transparent to-transparent" />
+            </div>
+            <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-fog-2 text-center">
+              Platform screenshot · demo data
+            </p>
+          </Section>
+        </Reveal>
       )}
 
       {study.featureGroups?.length > 0 && (
+        <Reveal>
         <Section className="py-16 md:py-28">
           <div className="mb-14">
             <Eyebrow>Inside the build</Eyebrow>
@@ -172,91 +184,100 @@ export default async function CaseStudyPage({
             ))}
           </div>
         </Section>
+        </Reveal>
       )}
 
-      <Section className="py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <Eyebrow>Outcomes</Eyebrow>
+      <Reveal>
+        <Section className="py-16 md:py-24">
+          <div className="grid gap-12 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <Eyebrow>Outcomes</Eyebrow>
+            </div>
+            <div className="md:col-span-8 space-y-5">
+              {study.outcomes.map((o, i) => (
+                <div
+                  key={o}
+                  className="flex items-start gap-5 pb-5 hairline-b last:hairline-b-0"
+                >
+                  <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-fog-2 mt-1.5 shrink-0 w-8">
+                    0{i + 1}
+                  </div>
+                  <div className="text-[17px] leading-[1.55] text-cream/85">
+                    {o}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="md:col-span-8 space-y-5">
-            {study.outcomes.map((o, i) => (
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section className="py-16 md:py-24">
+          <div className="flex flex-wrap gap-3">
+            {study.stack.map((s) => (
               <div
-                key={o}
-                className="flex items-start gap-5 pb-5 hairline-b last:hairline-b-0"
+                key={s}
+                className="hairline rounded-full px-4 py-2 text-[13px] text-cream/80 bg-white/[0.02]"
               >
-                <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-fog-2 mt-1.5 shrink-0 w-8">
-                  0{i + 1}
-                </div>
-                <div className="text-[17px] leading-[1.55] text-cream/85">
-                  {o}
-                </div>
+                {s}
               </div>
             ))}
           </div>
-        </div>
-      </Section>
+        </Section>
+      </Reveal>
 
-      <Section className="py-16 md:py-24">
-        <div className="flex flex-wrap gap-3">
-          {study.stack.map((s) => (
-            <div
-              key={s}
-              className="hairline rounded-full px-4 py-2 text-[13px] text-cream/80 bg-white/[0.02]"
-            >
-              {s}
+      <Reveal intensity="strong">
+        <Section className="py-16 md:py-24">
+          <Link
+            href={`/work/${next.slug}`}
+            className="group block relative overflow-hidden rounded-2xl hairline bg-obsidian-2 hover:border-white/20 transition-colors"
+          >
+            <div className="relative aspect-[24/7] md:aspect-[24/7]">
+              <Image
+                src={next.image}
+                alt={next.client}
+                fill
+                sizes="100vw"
+                className="object-cover opacity-55 group-hover:opacity-70 transition-opacity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/70 to-transparent" />
             </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section className="py-16 md:py-24">
-        <Link
-          href={`/work/${next.slug}`}
-          className="group block relative overflow-hidden rounded-2xl hairline bg-obsidian-2 hover:border-white/20 transition-colors"
-        >
-          <div className="relative aspect-[24/7] md:aspect-[24/7]">
-            <Image
-              src={next.image}
-              alt={next.client}
-              fill
-              sizes="100vw"
-              className="object-cover opacity-55 group-hover:opacity-70 transition-opacity"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/70 to-transparent" />
-          </div>
-          <div className="absolute inset-0 flex items-center p-8 md:p-14">
-            <div>
-              <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-fog">
-                Next case study
-              </div>
-              <div className="mt-3 font-sans font-semibold tracking-tight text-[clamp(1.5rem,2.8vw,2.5rem)] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
-                {next.headline}
-              </div>
-              <div className="mt-5 inline-flex items-center gap-2 text-[14px] text-cream/80 group-hover:text-cream transition-colors">
-                <span>Read the build</span>
-                <ArrowUpRight className="h-4 w-4" />
+            <div className="absolute inset-0 flex items-center p-8 md:p-14">
+              <div>
+                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-fog">
+                  Next case study
+                </div>
+                <div className="mt-3 font-sans font-semibold tracking-tight text-[clamp(1.5rem,2.8vw,2.5rem)] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
+                  {next.headline}
+                </div>
+                <div className="mt-5 inline-flex items-center gap-2 text-[14px] text-cream/80 group-hover:text-cream transition-colors">
+                  <span>Read the build</span>
+                  <ArrowUpRight className="h-4 w-4" />
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
-      </Section>
+          </Link>
+        </Section>
+      </Reveal>
 
-      <Section className="py-20">
-        <div className="text-center max-w-[52ch] mx-auto">
-          <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.5vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
-            Want something like this, shaped around your business?
-          </h2>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button href="/get-started" size="lg" trailingArrow>
-              Start a build
-            </Button>
-            <Button href="/platform" variant="secondary" size="lg">
-              See the platform
-            </Button>
+      <Reveal intensity="strong">
+        <Section className="py-20">
+          <div className="text-center max-w-[52ch] mx-auto">
+            <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.5vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
+              Want something like this, shaped around your business?
+            </h2>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Button href="/get-started" size="lg" trailingArrow>
+                Start a build
+              </Button>
+              <Button href="/platform" variant="secondary" size="lg">
+                See the platform
+              </Button>
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </Reveal>
     </>
   );
 }

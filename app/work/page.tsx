@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { GradientOrb } from "@/components/shared/gradient-orb";
+import { Reveal } from "@/components/shared/reveal";
 import { caseStudies } from "@/lib/case-studies";
 import { ArrowUpRight } from "lucide-react";
 
@@ -39,9 +40,9 @@ export default function WorkIndex() {
 
       <Section className="pb-32 space-y-20">
         {caseStudies.map((c, idx) => (
+          <Reveal key={c.slug} intensity="strong">
           <Link
             href={`/work/${c.slug}`}
-            key={c.slug}
             className="group block"
           >
             <div className={`grid gap-8 md:gap-14 md:grid-cols-12 items-center ${idx % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}>
@@ -74,6 +75,7 @@ export default function WorkIndex() {
               </div>
             </div>
           </Link>
+          </Reveal>
         ))}
       </Section>
     </>

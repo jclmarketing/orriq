@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { GradientOrb } from "@/components/shared/gradient-orb";
+import { Reveal } from "@/components/shared/reveal";
 import { competitors } from "@/lib/competitors";
 import { ArrowUpRight } from "lucide-react";
 
@@ -32,6 +33,7 @@ export default function VsIndex() {
       </section>
 
       <Section className="pb-32">
+        <Reveal>
         <div className="grid gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06] md:grid-cols-2">
           {competitors.map((c) => (
             <Link
@@ -55,6 +57,7 @@ export default function VsIndex() {
             </Link>
           ))}
         </div>
+        </Reveal>
       </Section>
     </>
   );

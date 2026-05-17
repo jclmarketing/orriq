@@ -3,6 +3,7 @@ import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { GradientOrb } from "@/components/shared/gradient-orb";
 import { ContactForm } from "@/components/contact/contact-form";
+import { Reveal } from "@/components/shared/reveal";
 import { Mail, MessageSquare, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -50,6 +51,7 @@ export default function ContactPage() {
         </Section>
       </section>
 
+      <Reveal>
       <Section className="pb-10">
         <div className="grid gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06] md:grid-cols-3">
           {channels.map((c) => (
@@ -73,7 +75,9 @@ export default function ContactPage() {
           ))}
         </div>
       </Section>
+      </Reveal>
 
+      <Reveal>
       <Section id="form" className="py-16 md:py-24">
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-4">
@@ -91,6 +95,7 @@ export default function ContactPage() {
           </div>
         </div>
       </Section>
+      </Reveal>
     </>
   );
 }

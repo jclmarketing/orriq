@@ -6,6 +6,7 @@ import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { Button } from "@/components/shared/button";
 import { GradientOrb } from "@/components/shared/gradient-orb";
+import { Reveal } from "@/components/shared/reveal";
 import { Check, X } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -60,6 +61,7 @@ export default async function VsPage({
         </Section>
       </section>
 
+      <Reveal>
       <Section className="py-20 md:py-28">
         <div className="rounded-2xl hairline overflow-hidden">
           <div className="grid grid-cols-[1.3fr_1fr_1fr] bg-obsidian-2">
@@ -95,17 +97,18 @@ export default async function VsPage({
           ))}
         </div>
       </Section>
+      </Reveal>
 
       <Section className="py-16 md:py-24">
         <div className="grid gap-12 md:grid-cols-12 items-start">
           <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
             <Eyebrow>Our verdict</Eyebrow>
           </div>
-          <div className="md:col-span-8">
+          <Reveal className="md:col-span-8">
             <p className="text-[18px] md:text-[20px] leading-[1.55] text-cream/85 font-sans font-semibold tracking-tight tracking-[-0.01em] max-w-[58ch]">
               {c.verdict}
             </p>
-          </div>
+          </Reveal>
         </div>
       </Section>
 
@@ -115,7 +118,7 @@ export default async function VsPage({
             <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
               <Eyebrow>Notes</Eyebrow>
             </div>
-            <div className="md:col-span-8 space-y-6">
+            <Reveal className="md:col-span-8 space-y-6">
               {c.notes.map((n, i) => (
                 <div key={i} className="flex gap-5 pb-6 hairline-b last:hairline-b-0">
                   <div className="font-mono text-[11px] uppercase tracking-[0.16em] text-fog-2 mt-1.5 shrink-0 w-8">
@@ -124,11 +127,12 @@ export default async function VsPage({
                   <p className="text-[16px] leading-[1.6] text-cream/75">{n}</p>
                 </div>
               ))}
-            </div>
+            </Reveal>
           </div>
         </Section>
       )}
 
+      <Reveal intensity="strong">
       <Section className="py-20">
         <div className="relative overflow-hidden rounded-3xl hairline-strong bg-obsidian-2 p-10 md:p-16">
           <GradientOrb variant="mixed" className="h-[400px] w-[400px] -top-20 -right-20 opacity-60" />
@@ -153,6 +157,7 @@ export default async function VsPage({
           </div>
         </div>
       </Section>
+      </Reveal>
     </>
   );
 }

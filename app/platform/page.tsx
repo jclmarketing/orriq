@@ -4,6 +4,7 @@ import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { Button } from "@/components/shared/button";
 import { GradientOrb } from "@/components/shared/gradient-orb";
+import { Reveal } from "@/components/shared/reveal";
 import { integrations } from "@/lib/integrations";
 
 export const metadata: Metadata = {
@@ -104,22 +105,25 @@ export default function PlatformPage() {
         </Section>
       </section>
 
-      <Section className="pb-16">
-        <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2">
-          <Image
-            src="/assets/platform-diagram.png"
-            alt="Orriq platform layered architecture"
-            width={2240}
-            height={1260}
-            className="w-full h-auto opacity-90"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent" />
-        </div>
-      </Section>
+      <Reveal intensity="strong">
+        <Section className="pb-16">
+          <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2">
+            <Image
+              src="/assets/platform-diagram.png"
+              alt="Orriq platform layered architecture"
+              width={2240}
+              height={1260}
+              className="w-full h-auto opacity-90"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent" />
+          </div>
+        </Section>
+      </Reveal>
 
       {layers.map((l, i) => (
-        <Section key={l.idx} className="py-20 md:py-28">
+        <Reveal key={l.idx}>
+        <Section className="py-20 md:py-28">
           <div
             className={`grid gap-12 md:grid-cols-12 items-start ${
               i % 2 === 1 ? "md:flex-row-reverse" : ""
@@ -150,8 +154,10 @@ export default function PlatformPage() {
             </div>
           </div>
         </Section>
+        </Reveal>
       ))}
 
+      <Reveal>
       <Section className="py-20 md:py-28">
         <div className="mb-10 flex items-end justify-between flex-wrap gap-4">
           <div>
@@ -177,7 +183,9 @@ export default function PlatformPage() {
           ))}
         </div>
       </Section>
+      </Reveal>
 
+      <Reveal intensity="strong">
       <Section className="py-20">
         <div className="relative overflow-hidden rounded-3xl hairline-strong bg-obsidian-2 p-12 md:p-20">
           <GradientOrb
@@ -204,6 +212,7 @@ export default function PlatformPage() {
           </div>
         </div>
       </Section>
+      </Reveal>
     </>
   );
 }

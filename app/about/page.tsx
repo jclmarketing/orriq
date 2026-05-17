@@ -3,6 +3,7 @@ import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { Button } from "@/components/shared/button";
 import { GradientOrb } from "@/components/shared/gradient-orb";
+import { Reveal } from "@/components/shared/reveal";
 
 export const metadata: Metadata = {
   title: "About",
@@ -48,7 +49,7 @@ export default function AboutPage() {
           <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
             <Eyebrow tone="accent">The origin</Eyebrow>
           </div>
-          <div className="md:col-span-8 space-y-6 text-[17px] leading-[1.65] text-cream/80 max-w-[60ch]">
+          <Reveal className="md:col-span-8 space-y-6 text-[17px] leading-[1.65] text-cream/80 max-w-[60ch]">
             <p>
               Orriq started as an internal build. JCL Marketing — a British
               boutique studio — was drowning in SaaS subscriptions. HubSpot for
@@ -67,37 +68,39 @@ export default function AboutPage() {
               repeatable approach: take modern infrastructure, shape it around
               the company in front of you, own the result. That's Orriq.
             </p>
-          </div>
+          </Reveal>
         </div>
       </Section>
 
-      <Section className="py-20 md:py-28">
-        <div className="mb-14">
-          <Eyebrow>How we work</Eyebrow>
-          <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
-            Four principles. Non-negotiable.
-          </h2>
-        </div>
-        <div className="grid gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06] md:grid-cols-2">
-          {principles.map((p) => (
-            <div key={p.title} className="bg-obsidian p-8 md:p-10">
-              <h3 className="font-sans font-semibold tracking-tight text-[22px] leading-tight tracking-[-0.02em]">
-                {p.title}
-              </h3>
-              <p className="mt-4 text-[15px] leading-[1.6] text-cream/70 max-w-[46ch]">
-                {p.body}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      <Reveal>
+        <Section className="py-20 md:py-28">
+          <div className="mb-14">
+            <Eyebrow>How we work</Eyebrow>
+            <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
+              Four principles. Non-negotiable.
+            </h2>
+          </div>
+          <div className="grid gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06] md:grid-cols-2">
+            {principles.map((p) => (
+              <div key={p.title} className="bg-obsidian p-8 md:p-10">
+                <h3 className="font-sans font-semibold tracking-tight text-[22px] leading-tight tracking-[-0.02em]">
+                  {p.title}
+                </h3>
+                <p className="mt-4 text-[15px] leading-[1.6] text-cream/70 max-w-[46ch]">
+                  {p.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      </Reveal>
 
       <Section className="py-20">
         <div className="grid gap-12 md:grid-cols-12 items-start">
           <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
             <Eyebrow>The team</Eyebrow>
           </div>
-          <div className="md:col-span-8 space-y-6 text-[16px] leading-[1.65] text-cream/75 max-w-[58ch]">
+          <Reveal className="md:col-span-8 space-y-6 text-[16px] leading-[1.65] text-cream/75 max-w-[58ch]">
             <p>
               Small, senior, deliberately so. The same two engineers you meet
               on the discovery call are the ones writing your schema, shipping
@@ -115,25 +118,27 @@ export default function AboutPage() {
               the question he kept getting from clients: "can you just make it
               actually fit us?"
             </p>
-          </div>
+          </Reveal>
         </div>
       </Section>
 
-      <Section className="py-20">
-        <div className="text-center max-w-[52ch] mx-auto">
-          <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
-            Want to work together?
-          </h2>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button href="/get-started" size="lg" trailingArrow>
-              Start a build
-            </Button>
-            <Button href="/contact" variant="secondary" size="lg">
-              Send a message
-            </Button>
+      <Reveal intensity="strong">
+        <Section className="py-20">
+          <div className="text-center max-w-[52ch] mx-auto">
+            <h2 className="font-sans font-semibold tracking-tight text-[clamp(1.8rem,3.4vw,2.75rem)] leading-[1.04] tracking-[-0.025em]">
+              Want to work together?
+            </h2>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Button href="/get-started" size="lg" trailingArrow>
+                Start a build
+              </Button>
+              <Button href="/contact" variant="secondary" size="lg">
+                Send a message
+              </Button>
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </Reveal>
     </>
   );
 }

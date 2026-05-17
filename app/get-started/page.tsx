@@ -3,6 +3,7 @@ import { Section } from "@/components/shared/section";
 import { Eyebrow } from "@/components/shared/eyebrow";
 import { Button } from "@/components/shared/button";
 import { GradientOrb } from "@/components/shared/gradient-orb";
+import { Reveal } from "@/components/shared/reveal";
 
 export const metadata: Metadata = {
   title: "Get started",
@@ -82,6 +83,7 @@ export default function GetStartedPage() {
         </Section>
       </section>
 
+      <Reveal>
       <Section className="py-20 md:py-28">
         <div className="mb-14">
           <Eyebrow>How it works</Eyebrow>
@@ -112,7 +114,9 @@ export default function GetStartedPage() {
           ))}
         </div>
       </Section>
+      </Reveal>
 
+      <Reveal>
       <Section className="py-20 md:py-28">
         <div className="grid gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06] md:grid-cols-2">
           <div className="bg-obsidian p-10 md:p-12">
@@ -139,7 +143,9 @@ export default function GetStartedPage() {
           </div>
         </div>
       </Section>
+      </Reveal>
 
+      <Reveal intensity="strong">
       <Section className="py-20">
         <div className="text-center max-w-[52ch] mx-auto">
           <Eyebrow className="justify-center" tone="accent">Pricing, briefly</Eyebrow>
@@ -158,6 +164,7 @@ export default function GetStartedPage() {
           </div>
         </div>
       </Section>
+      </Reveal>
     </>
   );
 }
