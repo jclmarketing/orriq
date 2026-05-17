@@ -126,7 +126,7 @@ export default function PlatformPage() {
             }`}
           >
             <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
-              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fog-2">
+              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan">
                 Layer {l.idx}
               </div>
               <div className="mt-3 font-sans font-semibold tracking-tight text-[20px] tracking-[-0.01em] text-cream/90">
