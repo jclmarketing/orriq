@@ -44,8 +44,8 @@ export default function AboutPage() {
       </section>
 
       <Section className="py-16">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
+        <div className="grid gap-12 md:grid-cols-12 items-start">
+          <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
             <Eyebrow tone="accent">The origin</Eyebrow>
           </div>
           <div className="md:col-span-8 space-y-6 text-[17px] leading-[1.65] text-cream/80 max-w-[60ch]">
@@ -94,7 +94,7 @@ export default function AboutPage() {
 
       <Section className="py-20">
         <div className="grid gap-12 md:grid-cols-12 items-start">
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
             <Eyebrow>The team</Eyebrow>
           </div>
           <div className="md:col-span-8 space-y-6 text-[16px] leading-[1.65] text-cream/75 max-w-[58ch]">

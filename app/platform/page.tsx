@@ -125,7 +125,7 @@ export default function PlatformPage() {
               i % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className="md:col-span-4">
+            <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
               <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fog-2">
                 Layer {l.idx}
               </div>

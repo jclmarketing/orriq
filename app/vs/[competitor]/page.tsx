@@ -97,8 +97,8 @@ export default async function VsPage({
       </Section>
 
       <Section className="py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
+        <div className="grid gap-12 md:grid-cols-12 items-start">
+          <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
             <Eyebrow>Our verdict</Eyebrow>
           </div>
           <div className="md:col-span-8">
@@ -111,8 +111,8 @@ export default async function VsPage({
 
       {c.notes.length > 0 && (
         <Section className="py-16 md:py-24">
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-4">
+          <div className="grid gap-12 md:grid-cols-12 items-start">
+            <div className="md:col-span-4 md:sticky md:top-24 md:self-start">
               <Eyebrow>Notes</Eyebrow>
             </div>
             <div className="md:col-span-8 space-y-6">
