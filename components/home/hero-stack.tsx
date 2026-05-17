@@ -23,7 +23,7 @@ export function HeroStack() {
         className="absolute -inset-12 rounded-[48px] opacity-60 blur-3xl pointer-events-none"
         style={{
           background:
-            "radial-gradient(60% 50% at 50% 45%, rgba(34,211,238,0.55) 0%, rgba(167,139,250,0.28) 40%, transparent 78%)",
+            "radial-gradient(60% 50% at 50% 45%, rgba(45,212,191,0.55) 0%, rgba(168,85,247,0.28) 40%, transparent 78%)",
         }}
       />
 

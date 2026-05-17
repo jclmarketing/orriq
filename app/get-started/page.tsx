@@ -69,7 +69,7 @@ export default function GetStartedPage() {
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Button
-              href="mailto:jon@jclmarketing.co.uk?subject=Orriq%20discovery%20call"
+              href="mailto:jon@orriq.com?subject=Orriq%20discovery%20call"
               size="lg"
               trailingArrow
             >

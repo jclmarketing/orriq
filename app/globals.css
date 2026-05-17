@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Backgrounds — true near-black for OLED-feel SaaS look */
-  --color-obsidian: #050507;
-  --color-obsidian-2: #0b0b10;
-  --color-obsidian-3: #14141b;
+  /* Backgrounds — pure black to match Orriq proposal */
+  --color-obsidian: #000000;
+  --color-obsidian-2: #0A0A0C;
+  --color-obsidian-3: #0F1014;
 
   /* Foreground */
-  --color-cream: #ffffff;
-  --color-cream-2: #d4d4d8;
+  --color-cream: #F5F5F7;
+  --color-cream-2: #C9CBD1;
 
   /* Muted */
-  --color-fog: #71717a;
-  --color-fog-2: #3f3f46;
+  --color-fog: #8A8C94;
+  --color-fog-2: #1F2127;
 
-  /* Accent — cyan-led electric */
-  --color-cyan: #22d3ee;
-  --color-cyan-2: #67e8f9;
-  --color-violet: #a78bfa;
-  --color-violet-2: #c4b5fd;
+  /* Accent — Orriq teal + purple (was cyan/violet) */
+  --color-cyan: #2DD4BF;
+  --color-cyan-2: #5EEAD4;
+  --color-violet: #A855F7;
+  --color-violet-2: #C084FC;
 
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
@@ -31,17 +31,23 @@
 
 html,
 body {
-  background: var(--color-obsidian);
+  background-color: #000000;
   color: var(--color-cream);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: "ss01", "ss03", "cv11";
+  background-image:
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(45, 212, 191, 0.10), transparent 65%),
+    radial-gradient(ellipse 70% 50% at 0% 100%, rgba(168, 85, 247, 0.09), transparent 65%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(45, 212, 191, 0.3);
   color: var(--color-cream);
 }
 
@@ -78,15 +84,15 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(34, 211, 238, 0.06) 0%,
-      rgba(34, 211, 238, 0.015) 100%
+      rgba(45, 212, 191, 0.06) 0%,
+      rgba(45, 212, 191, 0.015) 100%
     );
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border: 1px solid rgba(34, 211, 238, 0.18);
+  border: 1px solid rgba(45, 212, 191, 0.18);
   box-shadow:
-    inset 0 1px 0 rgba(34, 211, 238, 0.12),
-    0 0 28px -8px rgba(34, 211, 238, 0.25);
+    inset 0 1px 0 rgba(45, 212, 191, 0.12),
+    0 0 28px -8px rgba(45, 212, 191, 0.25);
 }
 
 /* === Gradient utilities === */
@@ -125,39 +131,39 @@ body {
 }
 
 .glow-cyan {
-  background: radial-gradient(60% 60% at 50% 50%, rgba(34, 211, 238, 0.4) 0%, transparent 70%);
+  background: radial-gradient(60% 60% at 50% 50%, rgba(45, 212, 191, 0.4) 0%, transparent 70%);
 }
 .glow-violet {
-  background: radial-gradient(60% 60% at 50% 50%, rgba(167, 139, 250, 0.32) 0%, transparent 70%);
+  background: radial-gradient(60% 60% at 50% 50%, rgba(168, 85, 247, 0.32) 0%, transparent 70%);
 }
 
 /* === Glow shadow utilities === */
 .shadow-glow-cyan {
   box-shadow:
-    0 0 0 1px rgba(34, 211, 238, 0.3),
-    0 0 28px -4px rgba(34, 211, 238, 0.6),
-    0 14px 40px -10px rgba(34, 211, 238, 0.3);
+    0 0 0 1px rgba(45, 212, 191, 0.3),
+    0 0 28px -4px rgba(45, 212, 191, 0.6),
+    0 14px 40px -10px rgba(45, 212, 191, 0.3);
 }
 .shadow-glow-soft {
   box-shadow:
-    0 0 60px -20px rgba(34, 211, 238, 0.45),
-    0 30px 80px -30px rgba(167, 139, 250, 0.3);
+    0 0 60px -20px rgba(45, 212, 191, 0.45),
+    0 30px 80px -30px rgba(168, 85, 247, 0.3);
 }
 
 /* === Conversion CTA — primary button glow === */
 .btn-cta {
   background: linear-gradient(180deg, #ffffff 0%, #e4e4e7 100%);
-  color: #050507;
+  color: #000000;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.5),
-    0 0 32px -2px rgba(34, 211, 238, 0.45),
+    0 0 32px -2px rgba(45, 212, 191, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
   transition: box-shadow 0.25s ease, transform 0.2s ease;
 }
 .btn-cta:hover {
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.6),
-    0 0 56px -2px rgba(34, 211, 238, 0.7),
+    0 0 56px -2px rgba(45, 212, 191, 0.7),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 

@@ -15,8 +15,8 @@ const channels = [
   {
     icon: Mail,
     label: "Email",
-    value: "jon@jclmarketing.co.uk",
-    href: "mailto:jon@jclmarketing.co.uk",
+    value: "jon@orriq.com",
+    href: "mailto:jon@orriq.com",
   },
   {
     icon: MessageSquare,

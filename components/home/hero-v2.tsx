@@ -1,10 +1,8 @@
-import Link from "next/link";
 import { Button } from "@/components/shared/button";
 import { DotGrid } from "@/components/shared/dot-grid";
 import { MonoLabel } from "@/components/shared/mono-label";
 import { BrandLogo } from "@/components/shared/brand-logo";
 import { HeroStack } from "@/components/home/hero-stack";
-import { ArrowUpRight } from "lucide-react";
 
 const HERO_PROOF_BRANDS = [
   "McDonald's",
@@ -26,20 +24,6 @@ export function HeroV2() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 md:px-10 lg:px-14">
         <div className="flex flex-col items-center text-center gap-7 max-w-[60ch] mx-auto pt-8 pb-10 md:pt-10 md:pb-14">
-          <Link
-            href="/work/jcl-crm"
-            className="group inline-flex items-center gap-3 rounded-full glass px-3.5 py-1.5 anim-fade-up"
-          >
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-cyan opacity-60 animate-ping" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan" />
-            </span>
-            <span className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-cream/85">
-              v0.7 · JCL CRM multi-tenant core shipped
-            </span>
-            <ArrowUpRight className="h-3.5 w-3.5 text-cream/60 group-hover:text-cream transition-colors" />
-          </Link>
-
           <h1
             className="anim-fade-up text-[clamp(2.5rem,6.5vw,5.75rem)] leading-[0.95] tracking-[-0.04em] text-cream font-semibold"
             style={{ animationDelay: "60ms" }}

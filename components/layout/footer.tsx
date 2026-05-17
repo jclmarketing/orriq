@@ -72,10 +72,10 @@ export function Footer() {
           <div className="flex gap-6">
             <span>Registered in England.</span>
             <a
-              href="mailto:jon@jclmarketing.co.uk"
+              href="mailto:jon@orriq.com"
               className="hover:text-cream transition-colors"
             >
-              jon@jclmarketing.co.uk
+              jon@orriq.com
             </a>
           </div>
         </div>

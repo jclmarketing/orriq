@@ -53,8 +53,8 @@ export function FAQ() {
           </h2>
           <p className="mt-5 text-[14.5px] leading-[1.6] text-cream/65 max-w-[40ch]">
             If yours isn't here, you can email{" "}
-            <a className="text-cream hover:text-cyan transition-colors" href="mailto:jon@jclmarketing.co.uk">
-              jon@jclmarketing.co.uk
+            <a className="text-cream hover:text-cyan transition-colors" href="mailto:jon@orriq.com">
+              jon@orriq.com
             </a>{" "}
             directly — typical reply is same-day.
           </p>
