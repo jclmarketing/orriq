@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CaseCover } from "@/components/work/case-cover";
 import Link from "next/link";
 import { caseStudies } from "@/lib/case-studies";
 import { Eyebrow } from "@/components/shared/eyebrow";
@@ -38,13 +38,9 @@ export function CaseStudiesPreview() {
             }`}
           >
             <div className={`relative ${i === 0 ? "aspect-[24/10]" : "aspect-[4/3]"} overflow-hidden`}>
-              <Image
-                src={c.image}
-                alt={c.client}
-                fill
-                sizes={i === 0 ? "(min-width: 768px) 100vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
-                className="object-cover object-top scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700 ease-out"
-              />
+              <div className="absolute inset-0 scale-[1.0] group-hover:scale-[1.03] transition-transform duration-700 ease-out">
+                <CaseCover study={c} showLabel={false} />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
             </div>
             <div className="relative -mt-20 p-8 md:p-10">

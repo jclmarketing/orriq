@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CaseCover } from "@/components/work/case-cover";
 import Link from "next/link";
 import { useState } from "react";
 import { Reveal } from "@/components/shared/reveal";
@@ -63,13 +63,9 @@ export function WorkList({ studies }: { studies: CaseStudy[] }) {
               >
                 <div className="md:col-span-7">
                   <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2 aspect-[16/10]">
-                    <Image
-                      src={c.image}
-                      alt={c.client}
-                      fill
-                      sizes="(min-width: 768px) 60vw, 100vw"
-                      className="object-cover object-top scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700 ease-out"
-                    />
+                    <div className="absolute inset-0 group-hover:scale-[1.03] transition-transform duration-700 ease-out">
+                      <CaseCover study={c} showLabel={false} />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-tr from-obsidian/60 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4 glass rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-cream/85">
                       {TYPE_LABEL[c.type]}

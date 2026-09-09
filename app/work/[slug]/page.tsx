@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CaseCover } from "@/components/work/case-cover";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -85,15 +85,8 @@ export default async function CaseStudyPage({
 
       <Reveal intensity="strong">
         <Section className="pb-16">
-          <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2 aspect-[16/9]">
-            <Image
-              src={study.image}
-              alt={study.client}
-              fill
-              sizes="100vw"
-              className="object-cover object-top"
-              priority
-            />
+          <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2 aspect-[16/9] md:aspect-[21/9]">
+            <CaseCover study={study} showLabel={false} />
           </div>
         </Section>
       </Reveal>
@@ -144,26 +137,6 @@ export default async function CaseStudyPage({
           </div>
         </Section>
       </Reveal>
-
-      {study.uiMockup && (
-        <Reveal intensity="strong">
-          <Section className="py-10 md:py-20">
-            <div className="relative overflow-hidden rounded-2xl hairline bg-obsidian-2">
-              <Image
-                src={study.uiMockup}
-                alt={`${study.client} UI screen`}
-                width={2240}
-                height={1260}
-                className="w-full h-auto"
-              />
-              <div aria-hidden className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-obsidian/20 via-transparent to-transparent" />
-            </div>
-            <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-fog-2 text-center">
-              Platform screenshot · demo data
-            </p>
-          </Section>
-        </Reveal>
-      )}
 
       {study.featureGroups?.length > 0 && (
         <Reveal>
@@ -245,13 +218,9 @@ export default async function CaseStudyPage({
             className="group block relative overflow-hidden rounded-2xl hairline bg-obsidian-2 hover:border-white/20 transition-colors"
           >
             <div className="relative aspect-[24/7] md:aspect-[24/7]">
-              <Image
-                src={next.image}
-                alt={next.client}
-                fill
-                sizes="100vw"
-                className="object-cover object-top opacity-55 group-hover:opacity-70 transition-opacity"
-              />
+              <div className="absolute inset-0 opacity-60 group-hover:opacity-80 transition-opacity">
+                <CaseCover study={next} showLabel={false} />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/70 to-transparent" />
             </div>
             <div className="absolute inset-0 flex items-center p-8 md:p-14">

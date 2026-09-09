@@ -4,8 +4,9 @@ export type CaseStudy = {
   industry: string;
   headline: string;
   summary: string;
-  image: string;
-  uiMockup?: string;
+  /** Code-drawn cover illustration, see components/work/case-cover.tsx. */
+  cover: "board" | "routes" | "browser" | "storefront" | "chat" | "schedule" | "forms" | "wallet" | "nodes" | "cv" | "portal" | "phone";
+  hue: "cyan" | "violet" | "mixed";
   metrics: { label: string; value: string }[];
   challenge: string;
   solution: string;
@@ -22,13 +23,13 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "mighty-structural",
+    cover: "routes",
+    hue: "cyan",
     client: "Mighty Structural",
     industry: "Made-to-measure manufacturing · Trade",
     headline: "A route-planned, quote-to-cash platform for a manufacturing firm.",
     summary:
       "Routes, runs, deliveries, made-to-measure quotes, PDF work orders, invoicing, Sage posting, Vapi phone agent, and an IMAP sweep that reconciles invoices without anyone touching a spreadsheet.",
-    image: "/assets/ui/mighty-route.png",
-    uiMockup: "/assets/ui/mighty-quote.png",
     url: "https://crm.mightystructural.com",
     metrics: [
       { label: "Entities replaced", value: "9" },
@@ -89,6 +90,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "mighty-website",
+    cover: "storefront",
+    hue: "violet",
     client: "Mighty Structural Products",
     industry: "Manufacturing · E-commerce storefront",
     type: "website",
@@ -96,7 +99,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "A made-to-measure roofing storefront with a live catalogue, a quote builder and three ways to pay.",
     summary:
       "The public site and shop for a Walsall roofing-sheet manufacturer: product catalogue driven from the CRM database, per-colour pricing, a multi-step made-to-measure quote builder, Stripe, PayPal and bank transfer at checkout, and a scroll-scrubbed video hero. Hosted and cached by us.",
-    image: "/assets/work/mighty-website.jpg",
     metrics: [
       { label: "Payment methods", value: "3" },
       { label: "Quote builder steps", value: "10" },
@@ -137,13 +139,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "garage-roof",
+    cover: "forms",
+    hue: "mixed",
     client: "Garage Roof Company",
     industry: "Roofing & construction",
     headline: "Survey-to-installation CRM for a roofing specialist.",
     summary:
       "A survey capture tool with property photos and sketched dimensions, a product configurator with pricing rules and VAT, route-optimised crew scheduling, and an instant quote engine, all shaped to how roofers actually sell and deliver.",
-    image: "/assets/ui/garage-roof-survey.png",
-    uiMockup: "/assets/ui/sidekick-calls.png",
     url: "https://crm.garageroofcompany.co.uk",
     metrics: [
       { label: "Quote turnaround", value: "Hours" },
@@ -204,6 +206,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "garage-roof-website",
+    cover: "browser",
+    hue: "cyan",
     client: "Garage Roof Company",
     industry: "Roofing · Website, SEO and lead capture",
     type: "website",
@@ -211,7 +215,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "The website, guides hub and lead capture behind a roofing CRM.",
     summary:
       "The public site for a roofing business whose CRM we also built: a theme optimised from staging, a guides section built for search, service-area pages, before-and-after video, cookie consent, and every form posting straight into their Supabase CRM.",
-    image: "/assets/work/garage-roof-website.jpg",
     metrics: [
       { label: "Forms", value: "→ CRM" },
       { label: "Guides", value: "SEO hub" },
@@ -252,12 +255,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "rr-access",
+    cover: "forms",
+    hue: "violet",
     client: "RR Access",
     industry: "Access & compliance management",
     headline: "Access management for a business Salesforce wouldn't fit.",
     summary:
       "Dynamic form builder, employee activity map, vehicle defects, qualification tracking, scaffold + PPE checklists, a weight calculator, and a separate customer portal, shipped in three weeks against a nine-month enterprise quote.",
-    image: "/assets/ui/rr-access-formbuilder.png",
     metrics: [
       { label: "Time to live", value: "3 weeks" },
       { label: "Quote replaced", value: "Salesforce" },
@@ -317,12 +321,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "apsweeperhire",
+    cover: "schedule",
+    hue: "cyan",
     client: "AP Sweeper Hire",
     industry: "Plant & vehicle hire",
     headline: "Fleet ops for a road sweeper hire company.",
     summary:
       "Daily vehicle scheduling, defect logs, license and compliance tracking, SMS/email comms templates, and a custom form builder for site-specific inspections, all wired into one operator dashboard.",
-    image: "/assets/ui/apsweeper-schedule.png",
     url: "https://crm.apsweeperhire.co.uk",
     metrics: [
       { label: "Compliance tracks", value: "Live" },
@@ -383,6 +388,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "apsweeper-website",
+    cover: "browser",
+    hue: "mixed",
     client: "AP Sweeper Hire",
     industry: "Road sweeper hire · Website",
     type: "website",
@@ -390,7 +397,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "A page-builder site rebuilt as a hand-coded theme, with a video hero shot on their own machines.",
     summary:
       "The public site for a road sweeper hire company whose CRM we also run: Breakdance replaced with a custom theme, a hero video from a full-day shoot of their fleet, quote forms that email the office and store every lead, and every service and area page kept on its existing URL.",
-    image: "/assets/work/apsweeper-website.jpg",
     metrics: [
       { label: "Page builder", value: "Removed" },
       { label: "Hero video", value: "Own fleet" },
@@ -431,6 +437,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "rawwins",
+    cover: "wallet",
+    hue: "violet",
     client: "Raw Wins",
     industry: "Prize competitions · E-commerce platform",
     type: "platform",
@@ -438,7 +446,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "A competition platform with wallets, instant wins, affiliates, campaigns and its own isolated database.",
     summary:
       "Ticketed competitions, free scratch-and-win, instant wins, a credit wallet, affiliate codes with sign-up tracking, abandoned-basket recovery, bulk email and SMS campaigns, and Meta conversion tracking that counts correctly. Running on its own self-hosted Supabase behind a Cloudflare tunnel.",
-    image: "/assets/work/rawwins.jpg",
     metrics: [
       { label: "Tables", value: "24" },
       { label: "Campaign channels", value: "Email + SMS" },
@@ -479,6 +486,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "alehub",
+    cover: "phone",
+    hue: "cyan",
     client: "Ale Hub",
     industry: "Micropubs · Website, hosting and app launch",
     type: "website",
@@ -486,7 +495,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "The website and app launch campaign for a seven-location micropub group.",
     summary:
       "Locations, events, merchandise and franchise pages for a growing micropub brand, hosted and maintained by us, plus the app download campaign: a rotating header banner, a homepage section with a phone mockup walking through the app, and a launch popup styled to the brand.",
-    image: "/assets/work/alehub.jpg",
     metrics: [
       { label: "Locations", value: "7" },
       { label: "App stores", value: "iOS + Android" },
@@ -527,12 +535,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "jcl-crm",
+    cover: "board",
+    hue: "mixed",
     client: "JCL Marketing",
     industry: "Agency · Internal platform",
     headline: "The internal platform we refused to buy.",
     summary:
       "Pipeline, projects, uptime monitors, call logs, LinkedIn prospecting, email warmup, SEO audits, and a full suite of Paperclip AI agents, one multi-tenant operating system for an agency that runs on its own medicine.",
-    image: "/assets/ui/jcl-pipeline.png",
     metrics: [
       { label: "Tools replaced", value: "11" },
       { label: "Uptime monitors", value: "37" },
@@ -600,6 +609,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "halzak-elevate",
+    cover: "portal",
+    hue: "violet",
     client: "Halzak Elevate",
     industry: "Membership community · Women in tech",
     type: "platform",
@@ -607,7 +618,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "A paid membership community that replaced a SharePoint volunteer centre.",
     summary:
       "Public community, a PRO tier with a £1 thirty-day trial rolling into monthly or annual plans, rich-text posts and events, real-time messaging and an admin that schedules content. Built on Supabase and Stripe with transactional email.",
-    image: "/assets/work/halzak-elevate.jpg",
     metrics: [
       { label: "Trial to plan", value: "£1 → £10/mo" },
       { label: "Messaging", value: "Realtime" },
@@ -648,6 +658,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "onyx-moving",
+    cover: "browser",
+    hue: "cyan",
     client: "Onyx Moving Services",
     industry: "Removals · West Midlands",
     type: "website",
@@ -655,7 +667,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "From a leaflet to a 26-page removals site with enquiries flowing into a workflow.",
     summary:
       "Onyx had a leaflet and a phone number. We built the brand into a site with ten service pages, ten area pages, guides, reviews and FAQs, moved their email onto a proper host and routed every quote form through an n8n workflow to the inbox.",
-    image: "/assets/work/onyx-moving.jpg",
     metrics: [
       { label: "Pages", value: "26" },
       { label: "Service pages", value: "10" },
@@ -696,6 +707,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "trio-construction",
+    cover: "browser",
+    hue: "violet",
     client: "Trio Construction Group",
     industry: "Construction · Solihull",
     type: "website",
@@ -703,7 +716,6 @@ export const caseStudies: CaseStudy[] = [
     headline: "A static site with 34 pages, real before-and-afters and an interactive trade explorer.",
     summary:
       "A Solihull builder with no web presence beyond Instagram. We rebuilt the logo as a vector, wrote twelve service and fourteen area pages, pulled genuine project photography from their CRM albums and shipped a fast static site on the edge.",
-    image: "/assets/work/trio-construction.jpg",
     metrics: [
       { label: "Pages", value: "34" },
       { label: "Service pages", value: "12" },
@@ -744,13 +756,14 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "greenland-qbo-bot",
+    cover: "chat",
+    hue: "mixed",
     client: "Greenland Services",
     industry: "Grounds maintenance · Accounts automation",
     type: "automation",
     headline: "A Telegram assistant that raises QuickBooks estimates and invoices from a text message.",
     summary:
       "Message the bot with the customer, the work and the prices. It finds the customer, builds the document with the right UK VAT code on every line, shows you the draft, and sends it from QuickBooks when you say so. Live on production books.",
-    image: "/assets/work/greenland-qbo-bot.jpg",
     metrics: [
       { label: "QuickBooks tools", value: "11" },
       { label: "VAT handling", value: "Per line" },
@@ -791,12 +804,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "applyflow",
+    cover: "cv",
+    hue: "cyan",
     client: "ApplyFlow",
     industry: "Careers SaaS · AI",
     headline: "An AI CV platform shipped on shared infrastructure.",
     summary:
       "A structured CV builder with Claude-powered rewriting, a job feed aggregator, auto-apply workflows, and subscription-gated AI, all delivered as a tenant on the Orriq core in weeks rather than quarters.",
-    image: "/assets/ui/applyflow-cv.png",
     metrics: [
       { label: "Auth & billing", value: "Shared core" },
       { label: "AI providers", value: "Claude + Gemini" },

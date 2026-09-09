@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { CaseCover } from "@/components/work/case-cover";
 import { Section } from "@/components/shared/section";
 import { MonoLabel } from "@/components/shared/mono-label";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,8 @@ type Tab = {
   label: string;
   title: string;
   body: string;
-  image: string;
+  cover: "board" | "routes" | "browser" | "storefront" | "chat" | "schedule" | "forms" | "wallet" | "nodes" | "cv" | "portal" | "phone";
+  hue: "cyan" | "violet" | "mixed";
   bullets: string[];
 };
 
@@ -21,7 +22,7 @@ const tabs: Tab[] = [
     label: "CRM",
     title: "A CRM modelled to your business, not a template's idea of one.",
     body: "Per-tenant Supabase schemas. Custom entities, relationships, and views. Row-level security on day one.",
-    image: "/assets/ui/jcl-pipeline.png",
+    cover: "board", hue: "mixed",
     bullets: [
       "Custom entities, custom hierarchies",
       "Row-level security by role",
@@ -33,7 +34,7 @@ const tabs: Tab[] = [
     label: "Workflows",
     title: "Automation that's visible, auditable, and yours.",
     body: "Visual n8n orchestration on the integration layer. Server-side TypeScript for the precise stuff. Every execution logged and replayable.",
-    image: "/assets/ui/apsweeper-schedule.png",
+    cover: "nodes", hue: "cyan",
     bullets: [
       "Triggers, conditions, retries, all visible",
       "n8n + bespoke TS handlers",
@@ -45,7 +46,7 @@ const tabs: Tab[] = [
     label: "AI agents",
     title: "Agents that do work, not summarise it.",
     body: "Claude, GPT, and Gemini wired into your data. Voice agents on Vapi. Inbound calls captured, transcribed, and structured.",
-    image: "/assets/ui/sidekick-calls.png",
+    cover: "chat", hue: "violet",
     bullets: [
       "AI-transcribed call logs with summaries",
       "Vapi voice agents for inbound",
@@ -57,7 +58,7 @@ const tabs: Tab[] = [
     label: "Forms & surveys",
     title: "No-code form builder, properly engineered underneath.",
     body: "Draggable fields, conditional logic, JSON schema. Public-facing forms, customer portals, internal capture tools, all on one builder.",
-    image: "/assets/ui/rr-access-formbuilder.png",
+    cover: "forms", hue: "cyan",
     bullets: [
       "Conditional logic + validation",
       "Public + internal forms",
@@ -69,7 +70,7 @@ const tabs: Tab[] = [
     label: "Quotes",
     title: "Quote-to-cash, with the moving parts wired in.",
     body: "Made-to-measure pricing, product configurators, instant PDF generation, status workflows, and clean handoff to your accounts package.",
-    image: "/assets/ui/mighty-quote.png",
+    cover: "storefront", hue: "violet",
     bullets: [
       "Configurable pricing rules",
       "Status workflow: Draft → Approved → Paid",
@@ -81,7 +82,7 @@ const tabs: Tab[] = [
     label: "Routes & jobs",
     title: "Field operations that don't live on a clipboard.",
     body: "Visual route planning, drag-and-drop reordering, vehicle assignment, on-the-job photo capture, mobile-native via Capacitor.",
-    image: "/assets/ui/mighty-route.png",
+    cover: "routes", hue: "mixed",
     bullets: [
       "Nearest-neighbour route optimiser",
       "Per-stop status flow",
@@ -103,8 +104,9 @@ export function PlatformTour() {
           <span className="italic text-fog/80">Every one of them yours.</span>
         </h2>
         <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70">
-          Click between the modules below. These are real screens from
-          platforms we have shipped for clients.
+          Click between the modules below to see how each part of a build
+          fits together. Illustrated, not screenshots: client data stays
+          private.
         </p>
       </div>
 
@@ -143,13 +145,7 @@ export function PlatformTour() {
                   t.id === activeId ? "opacity-100" : "opacity-0 pointer-events-none",
                 )}
               >
-                <Image
-                  src={t.image}
-                  alt={t.title}
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="absolute inset-0 h-full w-full object-cover object-top"
-                />
+                <CaseCover study={{ cover: t.cover, hue: t.hue, client: t.label }} showLabel={false} />
                 <div className="absolute inset-0 bg-gradient-to-tr from-obsidian/40 via-transparent to-transparent" />
               </div>
             ))}

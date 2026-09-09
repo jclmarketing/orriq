@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CaseCover } from "@/components/work/case-cover";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -185,13 +185,7 @@ export default async function ServicePage({
                   className="group relative overflow-hidden rounded-2xl hairline bg-obsidian-2 hover:border-white/20 transition-colors"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={c.image}
-                      alt={c.client}
-                      fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover object-top scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700 ease-out"
-                    />
+                    <CaseCover study={c} showLabel={false} />
                     <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent" />
                   </div>
                   <div className="relative -mt-10 p-6">
