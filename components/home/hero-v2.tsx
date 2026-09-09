@@ -3,7 +3,7 @@ import { Button } from "@/components/shared/button";
 import { DotGrid } from "@/components/shared/dot-grid";
 import { MonoLabel } from "@/components/shared/mono-label";
 import { BrandLogo } from "@/components/shared/brand-logo";
-import { HeroStack } from "@/components/home/hero-stack";
+import { HeroBento } from "@/components/home/hero-bento";
 
 const HERO_PROOF_BRANDS = [
   "McDonald's",
@@ -104,13 +104,7 @@ export function HeroV2() {
           className="relative mx-auto pt-6 pb-24 md:pb-32 anim-fade-up"
           style={{ animationDelay: "380ms" }}
         >
-          <HeroStack />
-
-          <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-40">
-            <div className="glass rounded-full px-3 py-1.5">
-              <MonoLabel withDot tone="live">Live operator dashboards · mockup data</MonoLabel>
-            </div>
-          </div>
+          <HeroBento />
         </div>
 
         <div className="mt-20 md:mt-28 pb-14">
