@@ -62,7 +62,7 @@ export function TechCarousel() {
       </div>
 
       <p className="mt-10 text-center font-mono text-[10.5px] uppercase tracking-[0.22em] text-fog-2">
-        Built with — not affiliated with or endorsed by these vendors
+        Built with, not affiliated with or endorsed by these vendors
       </p>
     </Section>
   );

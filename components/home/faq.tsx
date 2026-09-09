@@ -10,24 +10,32 @@ type QA = { q: string; a: string };
 
 const faqs: QA[] = [
   {
+    q: "Do you only do CRMs, or websites as well?",
+    a: "Both, and everything around them. We started as a marketing agency building and hosting websites, and still do: custom WordPress themes, static builds, SEO content, Google Ads. The CRM and platform work grew out of clients asking who could build the system behind the site. Most clients end up with the website, the hosting and the CRM from us because it is one team and one phone number.",
+  },
+  {
+    q: "Can you host a site you did not build?",
+    a: "Yes, after an audit. We move it onto servers we run, strip the plugins that should not be there, add monitoring and nightly offsite backups, and put a staging copy on a subdomain. If the site needs real work before it is safe, we tell you first.",
+  },
+  {
     q: "Can you really replace our SaaS stack in 30 days?",
-    a: "For a defined first-build outcome — yes. We won't replace nine tools in a month. We will get a focused, useful operating layer live: pipeline, core records, the most painful workflow, and the integrations that matter. Then we keep going week-by-week.",
+    a: "For a defined first-build outcome, yes. We won't replace nine tools in a month. We will get a focused, useful operating layer live: pipeline, core records, the most painful workflow, and the integrations that matter. Then we keep going week by week.",
   },
   {
     q: "What if our setup is more complex than 30 days allows?",
-    a: "We tell you upfront. Discovery is free, fast, and brutally honest. If a 30-day live target is unrealistic, we propose a different shape — but we still won't take work we don't believe we can ship.",
+    a: "We tell you upfront. Discovery is free, fast, and brutally honest. If a 30-day live target is unrealistic, we propose a different shape, but we still won't take work we don't believe we can ship.",
   },
   {
     q: "How is this different from hiring an agency or consultancy?",
     a: "Most agencies sell hours. We sell outcomes. There's no offshore subcontractor pool, no junior hand-off, and no escalation matrix. The two people on the discovery call are the two people who write your code.",
   },
   {
-    q: "What happens to our existing tools — HubSpot, Sage, etc?",
+    q: "What happens to our existing tools, like HubSpot and Sage?",
     a: "We integrate the ones worth keeping (Sage and Stripe almost always stay) and replace the ones that are forcing your business into a generic shape (HubSpot, Monday, Salesforce, Notion-as-database). You decide; we recommend.",
   },
   {
     q: "Who owns the code and the data?",
-    a: "You. Always. The code lives in a repo with you as owner. The database is your Supabase tenant. If we ever part ways, the lights stay on — no extraction project, no vendor lock-in, no hostage data.",
+    a: "You. Always. The code lives in a repo with you as owner. The database is your Supabase tenant. Your website, domain and DNS are yours. If we ever part ways, the lights stay on: no extraction project, no vendor lock-in, no hostage data.",
   },
   {
     q: "How do you handle security and compliance?",
@@ -35,7 +43,7 @@ const faqs: QA[] = [
   },
   {
     q: "What does it cost?",
-    a: "Builds start from £15k for a focused first-build, scaling with module count and integration depth. Retainers from £2k/month including hosting, support, and a monthly improvement budget. No per-seat tax — ever.",
+    a: "Websites and single automations are a fixed quote from the brief. Platform builds start from £15k for a focused first build, scaling with module count and integration depth. Retainers from £2k a month including hosting, support and a monthly improvement budget. Orriq CRM tenants are a flat monthly fee. No per-seat tax, ever.",
   },
 ];
 
@@ -56,7 +64,7 @@ export function FAQ() {
             <a className="text-cream hover:text-cyan transition-colors" href="mailto:jon@orriq.com">
               jon@orriq.com
             </a>{" "}
-            directly — typical reply is same-day.
+            directly. Typical reply is same day.
           </p>
         </div>
         <div className="md:col-span-8">

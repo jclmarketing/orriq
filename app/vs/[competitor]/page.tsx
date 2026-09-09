@@ -143,7 +143,7 @@ export default async function VsPage({
             </h2>
             <p className="mt-5 max-w-[52ch] text-[16px] text-cream/75 leading-relaxed">
               We've replaced this platform before. We'll map what you have,
-              what you need, and what to leave behind — no pitch deck
+              what you need, and what to leave behind, no pitch deck
               required.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">

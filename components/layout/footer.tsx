@@ -3,11 +3,26 @@ import { Logo } from "@/components/shared/logo";
 
 const groups = [
   {
-    title: "Product",
+    title: "Services",
+    items: [
+      { href: "/services/websites", label: "Websites" },
+      { href: "/services/hosting", label: "Hosting & care" },
+      { href: "/services/crm", label: "Orriq CRM" },
+      { href: "/services/bespoke-crm", label: "Bespoke platforms" },
+      { href: "/services/custom-solutions", label: "Automation" },
+      { href: "/services/app-development", label: "App development" },
+      { href: "/services/ai-agents", label: "AI agents & voice" },
+      { href: "/services/seo-and-ads", label: "SEO, ads & tracking" },
+    ],
+  },
+  {
+    title: "Company",
     items: [
       { href: "/platform", label: "Platform" },
-      { href: "/work", label: "Case studies" },
+      { href: "/work", label: "Work" },
+      { href: "/about", label: "About" },
       { href: "/get-started", label: "Get started" },
+      { href: "/contact", label: "Contact" },
     ],
   },
   {
@@ -20,13 +35,6 @@ const groups = [
       { href: "/vs/asana", label: "vs Asana" },
     ],
   },
-  {
-    title: "Company",
-    items: [
-      { href: "/about", label: "About" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
 ];
 
 export function Footer() {
@@ -37,9 +45,10 @@ export function Footer() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-5 max-w-sm text-[14px] leading-relaxed text-fog">
-              Orriq builds bespoke operational infrastructure for companies
-              that refuse to run on generic SaaS — CRM, AI, automation, and
-              business operating systems shaped to how you actually work.
+              Orriq builds and runs everything a business runs on: the
+              website, the hosting, the CRM, the apps in the field and the
+              automation and AI in between. One team, on infrastructure you
+              own. Formerly JCL Marketing.
             </p>
             <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-fog-2">
               Built on Orriq.

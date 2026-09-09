@@ -8,10 +8,10 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { value: "7", label: "Operating systems shipped", detail: "Across manufacturing, trades, engineering, agency, careers" },
-  { value: "12", label: "Live integrations", detail: "Sage, Stripe, Vapi, 8x8, Google, Microsoft, n8n, more" },
-  { value: "37", label: "Uptime monitors live", detail: "Every tenant watched, around the clock" },
-  { value: "100%", label: "Data ownership", detail: "Self-hosted Supabase. Your tenant. Your code." },
+  { value: "90+", label: "Websites hosted and maintained", detail: "On servers we run, monitored around the clock, backed up nightly" },
+  { value: "7", label: "Operating systems shipped", detail: "Manufacturing, scaffolding, plant hire, roofing, agency, careers, gym" },
+  { value: "12+", label: "Live integrations", detail: "Sage, QuickBooks, Stripe, Vapi, 8x8, Google, Microsoft, WhatsApp, n8n" },
+  { value: "100%", label: "Owned by the client", detail: "Self-hosted database, your repository, your domain, your DNS" },
 ];
 
 export function Stats() {

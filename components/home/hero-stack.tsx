@@ -1,15 +1,15 @@
 import { UiPanel } from "@/components/shared/ui-panel";
 
 /**
- * Asana-style layered hero composition.
+ * Layered hero composition of real product screenshots.
  *
  * Layout (desktop):
- *   - Main panel centred, slight forward tilt
- *   - Top-right satellite tilts away (route map)
- *   - Bottom-left satellite tilts toward viewer (calls)
- *   - Bottom-right satellite tucked behind (schedule)
+ *   - Main panel centred, slight forward tilt (JCL CRM pipeline)
+ *   - Top-right satellite tilts away (Mighty route planner)
+ *   - Bottom-left satellite tilts toward viewer (Garage Roof Company call logs)
+ *   - Bottom-right satellite tucked behind (AP Sweeper Hire scheduler)
  *
- * Mobile collapses satellites — only the main panel renders to keep the LCP fast.
+ * Mobile collapses satellites: only the main panel renders to keep the LCP fast.
  */
 export function HeroStack() {
   return (
@@ -27,40 +27,32 @@ export function HeroStack() {
         }}
       />
 
-      {/* Main panel — JCL pipeline */}
       <UiPanel
         priority
-        src="/assets/ui-video/jcl-pipeline.mp4"
-        poster="/assets/ui/jcl-pipeline.png"
-        alt="JCL CRM pipeline dashboard"
-        url="jcl.orriq.app / deals"
+        image="/assets/ui/jcl-pipeline.png"
+        alt="Orriq CRM pipeline board"
+        url="crm.orriq.com / deals"
         className="relative z-20 mx-auto w-[88%] md:w-[78%] origin-center [transform:rotateX(6deg)_rotateY(-2deg)]"
       />
 
-      {/* Top-right satellite — Mighty route planner */}
       <UiPanel
-        src="/assets/ui-video/mighty-route.mp4"
-        poster="/assets/ui/mighty-route.png"
+        image="/assets/ui/mighty-route.png"
         alt="Mighty CRM route planner"
-        url="mighty.orriq.app / routes"
+        url="crm.mightystructural.com / routes"
         className="hidden md:block absolute top-[-4%] right-[-4%] z-30 w-[34%] origin-bottom-left [transform:rotateX(8deg)_rotateY(-14deg)_rotateZ(2.5deg)]"
       />
 
-      {/* Bottom-left satellite — Sidekick calls */}
       <UiPanel
-        src="/assets/ui-video/sidekick-calls.mp4"
-        poster="/assets/ui/sidekick-calls.png"
-        alt="Sidekick call logs"
-        url="sidekick.orriq.app / calls"
+        image="/assets/ui/sidekick-calls.png"
+        alt="Garage Roof Company CRM AI call logs"
+        url="crm.garageroofcompany.co.uk / calls"
         className="hidden md:block absolute bottom-[-10%] left-[-3%] z-30 w-[34%] origin-top-right [transform:rotateX(-6deg)_rotateY(12deg)_rotateZ(-3deg)]"
       />
 
-      {/* Bottom-right satellite — AP Sweeper schedule (tucked behind, smaller) */}
       <UiPanel
-        src="/assets/ui-video/apsweeper-schedule.mp4"
-        poster="/assets/ui/apsweeper-schedule.png"
-        alt="AP Sweeper schedule"
-        url="apsweeper.orriq.app / scheduler"
+        image="/assets/ui/apsweeper-schedule.png"
+        alt="AP Sweeper Hire job scheduler"
+        url="crm.apsweeperhire.co.uk / scheduler"
         className="hidden lg:block absolute bottom-[-14%] right-[-2%] z-10 w-[28%] origin-top-left [transform:rotateX(-4deg)_rotateY(-10deg)_rotateZ(2deg)] opacity-95"
       />
     </div>

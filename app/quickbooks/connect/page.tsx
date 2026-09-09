@@ -4,7 +4,7 @@ import { Eyebrow } from "@/components/shared/eyebrow";
 import { GradientOrb } from "@/components/shared/gradient-orb";
 
 export const metadata: Metadata = {
-  title: "QuickBooks Assistant — Connect",
+  title: "QuickBooks Assistant, Connect",
   description:
     "Connect or reconnect the Orriq QuickBooks Assistant to your QuickBooks Online company.",
 };

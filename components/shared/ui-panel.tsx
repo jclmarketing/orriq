@@ -1,24 +1,23 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type Props = {
-  src: string;
-  poster: string;
+  /** Real product screenshot, 16:9. */
+  image: string;
   alt: string;
-  /** Browser-chrome label (e.g. "jcl-marketing.app/deals"). Optional. */
+  /** Browser-chrome label (e.g. "crm.mightystructural.com / routes"). Optional. */
   url?: string;
   /** Tailwind classes to position/transform the panel. */
   className?: string;
-  /** Disable autoplay (e.g. for lazy off-screen panels). */
-  paused?: boolean;
-  /** Render priority — main panel gets higher quality preload. */
+  /** Main panel gets priority loading for LCP. */
   priority?: boolean;
 };
 
 /**
- * Browser-chrome framed video card. Default rounded with soft glass shadow.
- * Compose multiple at different `className` transforms for an Asana-style stack.
+ * Browser-chrome framed screenshot card. Default rounded with soft glass shadow.
+ * Compose multiple at different `className` transforms for a layered stack.
  */
-export function UiPanel({ src, poster, alt, url, className, paused, priority }: Props) {
+export function UiPanel({ image, alt, url, className, priority }: Props) {
   return (
     <div
       className={cn(
@@ -39,16 +38,13 @@ export function UiPanel({ src, poster, alt, url, className, paused, priority }: 
       </div>
 
       <div className="relative aspect-video">
-        <video
-          src={src}
-          poster={poster}
-          autoPlay={!paused}
-          muted
-          loop
-          playsInline
-          preload={priority ? "metadata" : "none"}
-          aria-label={alt}
-          className="absolute inset-0 h-full w-full object-cover"
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes="(min-width: 1024px) 900px, 100vw"
+          className="object-cover object-top"
         />
       </div>
     </div>

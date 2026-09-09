@@ -55,8 +55,8 @@ export function MethodPipeline() {
           <span className="italic text-fog/80">end to end.</span>
         </h2>
         <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70">
-          Five steps that take a business from "we run on duct tape" to
-          "we own a measurable operating system" — without restarting your
+          Five steps that take a business from &ldquo;we run on duct tape&rdquo; to
+          &ldquo;we own a measurable operating system&rdquo;, without restarting your
           tooling tomorrow.
         </p>
       </div>
@@ -71,7 +71,7 @@ export function MethodPipeline() {
           className="hidden md:block absolute top-[42px] left-[8%] right-[8%] h-px"
           style={{
             background:
-              "linear-gradient(90deg, transparent 0%, rgba(124,58,237,0.6) 20%, rgba(6,182,212,0.6) 80%, transparent 100%)",
+              "linear-gradient(90deg, transparent 0%, rgba(168,85,247,0.6) 20%, rgba(45,212,191,0.6) 80%, transparent 100%)",
             filter: "blur(6px)",
           }}
         />

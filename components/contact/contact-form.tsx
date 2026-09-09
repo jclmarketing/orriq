@@ -19,7 +19,7 @@ export function ContactForm() {
           Message received
         </div>
         <div className="mt-4 font-sans font-semibold tracking-tight text-[28px] tracking-[-0.02em] leading-tight">
-          Thanks — we'll reply within a working day.
+          Thanks. We will reply within a working day.
         </div>
         <p className="mt-4 text-[15px] text-cream/70 max-w-[46ch]">
           In the meantime, the{" "}
@@ -46,8 +46,35 @@ export function ContactForm() {
         <Field label="Email" name="email" type="email" required />
         <Field label="Phone (optional)" name="phone" />
       </div>
+      <div>
+        <label
+          htmlFor="need"
+          className="block font-mono text-[11px] uppercase tracking-[0.18em] text-fog"
+        >
+          What do you need first?
+        </label>
+        <select
+          id="need"
+          name="need"
+          defaultValue=""
+          className="mt-2 w-full bg-obsidian-2 hairline rounded-lg px-4 py-3 text-[15px] text-cream focus:border-cyan/40 focus:outline-none focus:ring-2 focus:ring-cyan/20 transition"
+        >
+          <option value="" disabled>
+            Pick the closest fit
+          </option>
+          <option>A new website</option>
+          <option>Hosting, care or a site move</option>
+          <option>Orriq CRM for my team</option>
+          <option>A bespoke CRM or platform</option>
+          <option>An automation or integration</option>
+          <option>An iOS, watch or web app</option>
+          <option>An AI phone agent or assistant</option>
+          <option>SEO, Google Ads or tracking</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
       <Field
-        label="What do you run today — and what's broken?"
+        label="What do you run today, and what is broken?"
         name="message"
         as="textarea"
         required

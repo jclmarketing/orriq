@@ -23,7 +23,7 @@ export async function generateMetadata({
   const study = getCaseStudy(slug);
   if (!study) return {};
   return {
-    title: `${study.client} — ${study.headline}`,
+    title: `${study.client} · ${study.headline}`,
     description: study.summary,
   };
 }
@@ -68,6 +68,17 @@ export default async function CaseStudyPage({
             <p className="mt-8 text-[17px] leading-[1.6] text-cream/75">
               {study.summary}
             </p>
+            {study.url && (
+              <a
+                href={study.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-[14px] text-cyan hover:text-cyan-2 transition-colors"
+              >
+                <span>Visit the live site</span>
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            )}
           </div>
         </Section>
       </section>
@@ -80,7 +91,7 @@ export default async function CaseStudyPage({
               alt={study.client}
               fill
               sizes="100vw"
-              className="object-cover"
+              className="object-cover object-top"
               priority
             />
           </div>
@@ -239,7 +250,7 @@ export default async function CaseStudyPage({
                 alt={next.client}
                 fill
                 sizes="100vw"
-                className="object-cover opacity-55 group-hover:opacity-70 transition-opacity"
+                className="object-cover object-top opacity-55 group-hover:opacity-70 transition-opacity"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/70 to-transparent" />
             </div>
@@ -271,8 +282,8 @@ export default async function CaseStudyPage({
               <Button href="/get-started" size="lg" trailingArrow>
                 Start a build
               </Button>
-              <Button href="/platform" variant="secondary" size="lg">
-                See the platform
+              <Button href="/services" variant="secondary" size="lg">
+                See what we do
               </Button>
             </div>
           </div>

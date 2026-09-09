@@ -44,7 +44,7 @@ export default function QuickBooksLandingPage() {
           <p className="mt-7 max-w-[60ch] text-[18px] leading-[1.6] text-cream/80">
             A private integration built by Orriq that turns everyday messages
             into estimates and invoices inside Greenland Services&rsquo;
-            QuickBooks Online account — with human review and correct UK VAT
+            QuickBooks Online account, with human review and correct UK VAT
             built in.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">

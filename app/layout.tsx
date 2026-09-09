@@ -19,15 +19,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://orriq.com"),
   title: {
-    default: "Orriq — The operating system your business should be running on.",
+    default: "Orriq · Websites, hosting, CRM, apps and automation for UK businesses",
     template: "%s · Orriq",
   },
   description:
-    "Orriq is the bespoke CRM, AI, and automation layer that replaces the patchwork of generic SaaS your business is duct-taped together with. One platform. Your schema. Your data. Built for you, owned by you.",
+    "Orriq builds and runs everything a business runs on: websites, managed hosting, Orriq CRM, bespoke platforms, custom automation, iOS and web apps, AI agents and search marketing. One team, infrastructure you own.",
   openGraph: {
-    title: "Orriq — The operating system your business should be running on.",
+    title: "Orriq · Websites, hosting, CRM, apps and automation",
     description:
-      "Bespoke CRM, AI, and automation. One operating layer. Built for you, owned by you.",
+      "Everything your business runs on, built by one team. Websites, hosting, CRM, bespoke platforms, apps, automation and AI.",
     url: "https://orriq.com",
     siteName: "Orriq",
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Orriq",
-    description: "The operating system your business should be running on.",
+    description: "Everything your business runs on, built by one team.",
   },
 };
 

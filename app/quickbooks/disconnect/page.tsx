@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalDoc } from "@/components/legal/legal-doc";
 
 export const metadata: Metadata = {
-  title: "QuickBooks Assistant — Disconnect",
+  title: "QuickBooks Assistant, Disconnect",
   description:
     "How to disconnect the Orriq QuickBooks Assistant from your QuickBooks Online company.",
 };

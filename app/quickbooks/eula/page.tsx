@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalDoc } from "@/components/legal/legal-doc";
 
 export const metadata: Metadata = {
-  title: "QuickBooks Assistant — End User License Agreement",
+  title: "QuickBooks Assistant, End User License Agreement",
   description:
     "The terms governing use of the Orriq QuickBooks Assistant integration.",
 };

@@ -9,7 +9,7 @@ import { Mail, MessageSquare, Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to us about a build. Email, form, or phone — we respond within a working day.",
+    "Talk to us about a build. Email, form, or phone, we respond within a working day.",
 };
 
 const channels = [
@@ -86,7 +86,7 @@ export default function ContactPage() {
               Tell us a little about what you run today.
             </h2>
             <p className="mt-5 text-[14.5px] text-cream/65 leading-relaxed max-w-[42ch]">
-              Anything you'd share on a first call works here — don't overthink
+              Anything you'd share on a first call works here, don't overthink
               it. One sentence or ten, either is fine.
             </p>
           </div>

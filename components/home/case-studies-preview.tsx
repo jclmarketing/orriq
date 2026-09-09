@@ -7,15 +7,21 @@ import { Button } from "@/components/shared/button";
 import { ArrowUpRight } from "lucide-react";
 
 export function CaseStudiesPreview() {
-  const featured = caseStudies.slice(0, 3);
+  const featured = caseStudies.slice(0, 5);
   return (
     <Section className="py-28 md:py-36">
       <div className="flex flex-col gap-4 mb-16 md:mb-20 md:flex-row md:items-end md:justify-between">
         <div>
           <Eyebrow>Proof</Eyebrow>
           <h2 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.02] tracking-[-0.03em] max-w-[18ch]">
-            Five builds. Five businesses we rebuilt around.
+            Real builds, for real businesses.{" "}
+            <span className="italic text-fog/80">Not a template in sight.</span>
           </h2>
+          <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70 max-w-[56ch]">
+            A route-planned manufacturer and its storefront, a roofing CRM, a
+            scaffolding CRM and a competition platform. {caseStudies.length}{" "}
+            live builds in total, every one of them in production today.
+          </p>
         </div>
         <Button href="/work" variant="secondary" size="md" trailingArrow>
           All case studies
@@ -37,7 +43,7 @@ export function CaseStudiesPreview() {
                 alt={c.client}
                 fill
                 sizes={i === 0 ? "(min-width: 768px) 100vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
-                className="object-cover scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700 ease-out"
+                className="object-cover object-top scale-[1.02] group-hover:scale-[1.06] transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
             </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Section } from "@/components/shared/section";
 import { MonoLabel } from "@/components/shared/mono-label";
 import { cn } from "@/lib/utils";
@@ -18,7 +19,7 @@ const tabs: Tab[] = [
   {
     id: "crm",
     label: "CRM",
-    title: "A CRM modelled to your business — not Monday's idea of one.",
+    title: "A CRM modelled to your business, not a template's idea of one.",
     body: "Per-tenant Supabase schemas. Custom entities, relationships, and views. Row-level security on day one.",
     image: "/assets/ui/jcl-pipeline.png",
     bullets: [
@@ -34,7 +35,7 @@ const tabs: Tab[] = [
     body: "Visual n8n orchestration on the integration layer. Server-side TypeScript for the precise stuff. Every execution logged and replayable.",
     image: "/assets/ui/apsweeper-schedule.png",
     bullets: [
-      "Triggers, conditions, retries — all visible",
+      "Triggers, conditions, retries, all visible",
       "n8n + bespoke TS handlers",
       "Per-execution audit history",
     ],
@@ -42,11 +43,11 @@ const tabs: Tab[] = [
   {
     id: "ai",
     label: "AI agents",
-    title: "Agents that do work — not summarise it.",
+    title: "Agents that do work, not summarise it.",
     body: "Claude, GPT, and Gemini wired into your data. Voice agents on Vapi. Inbound calls captured, transcribed, and structured.",
     image: "/assets/ui/sidekick-calls.png",
     bullets: [
-      "Embedded chat with full record context",
+      "AI-transcribed call logs with summaries",
       "Vapi voice agents for inbound",
       "Structured outputs into your schema",
     ],
@@ -55,7 +56,7 @@ const tabs: Tab[] = [
     id: "forms",
     label: "Forms & surveys",
     title: "No-code form builder, properly engineered underneath.",
-    body: "Draggable fields, conditional logic, JSON schema. Public-facing forms, customer portals, internal capture tools — all on one builder.",
+    body: "Draggable fields, conditional logic, JSON schema. Public-facing forms, customer portals, internal capture tools, all on one builder.",
     image: "/assets/ui/rr-access-formbuilder.png",
     bullets: [
       "Conditional logic + validation",
@@ -96,14 +97,14 @@ export function PlatformTour() {
   return (
     <Section className="py-24 md:py-32" id="tour">
       <div className="max-w-[58ch] mb-12 md:mb-16">
-        <MonoLabel tone="accent">A tour of the platform</MonoLabel>
+        <MonoLabel tone="accent">Inside a bespoke build</MonoLabel>
         <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
           Six surfaces.{" "}
           <span className="italic text-fog/80">Every one of them yours.</span>
         </h2>
         <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70">
-          Click between the modules below — these are real screens from
-          operating systems we've shipped.
+          Click between the modules below. These are real screens from
+          platforms we have shipped for clients.
         </p>
       </div>
 
@@ -142,16 +143,12 @@ export function PlatformTour() {
                   t.id === activeId ? "opacity-100" : "opacity-0 pointer-events-none",
                 )}
               >
-                <video
-                  src={t.image.replace("/assets/ui/", "/assets/ui-video/").replace(/\.png$/, ".mp4")}
-                  poster={t.image}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label={t.title}
-                  className="absolute inset-0 h-full w-full object-cover"
+                <Image
+                  src={t.image}
+                  alt={t.title}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="absolute inset-0 h-full w-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-obsidian/40 via-transparent to-transparent" />
               </div>

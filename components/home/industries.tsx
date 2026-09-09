@@ -45,7 +45,7 @@ export function Industries() {
             <span className="italic text-fog/80">complexity lives.</span>
           </h2>
           <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70">
-            Sectors where SaaS templates fall apart — high data volume,
+            Sectors where SaaS templates fall apart: high data volume,
             multi-role teams, regulated processes, real-world field
             operations.
           </p>
@@ -87,7 +87,7 @@ export function Industries() {
             </div>
           </div>
           <p className="mt-6 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-fog-2">
-            Prior client engagements of the founding team — not a partnership claim
+            Prior client engagements of the founding team, not a partnership claim
           </p>
         </div>
       </div>

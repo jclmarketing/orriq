@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalDoc } from "@/components/legal/legal-doc";
 
 export const metadata: Metadata = {
-  title: "QuickBooks Assistant — Privacy Policy",
+  title: "QuickBooks Assistant, Privacy Policy",
   description:
     "How the Orriq QuickBooks Assistant collects, uses, stores and protects data accessed from QuickBooks Online.",
 };
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
       <h2>How we use the information</h2>
       <p>
         Data accessed from QuickBooks is used solely to provide the Application&rsquo;s
-        functionality — matching customers, building line items with correct VAT,
+        functionality, matching customers, building line items with correct VAT,
         and creating or retrieving estimates and invoices at the request of an
         authorised user. We do not use your QuickBooks data for advertising, and
         we do not sell it or share it with third parties for their own purposes.

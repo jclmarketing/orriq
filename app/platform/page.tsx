@@ -10,7 +10,7 @@ import { integrations } from "@/lib/integrations";
 export const metadata: Metadata = {
   title: "Platform",
   description:
-    "How Orriq is built: self-hosted Supabase, Next.js, n8n, AI agents, and bespoke code — assembled into the shape of your business.",
+    "The stack under every Orriq build: self-hosted Postgres, Next.js, n8n, AI agents, managed servers and bespoke code, assembled into the shape of your business.",
 };
 
 const layers = [
@@ -19,9 +19,9 @@ const layers = [
     name: "Data layer",
     heading: "A database that models you, not a generic CRM.",
     description:
-      "Self-hosted Postgres via Supabase. Per-client tenant schemas with row-level security. Every table designed around your actual entities — jobs, quotes, patients, tenants, fleets, whatever your business genuinely contains.",
+      "Self-hosted Postgres via Supabase. Per-client tenant schemas with row-level security. Every table designed around your actual entities, jobs, quotes, patients, tenants, fleets, whatever your business genuinely contains.",
     features: [
-      "Self-hosted Supabase — yours to keep",
+      "Self-hosted Supabase, yours to keep",
       "Per-tenant isolation, shared auth core",
       "Typed schemas generated to TypeScript",
       "Backed up hourly, versioned migrations",
@@ -32,7 +32,7 @@ const layers = [
     name: "Logic layer",
     heading: "Business rules, not workflow templates.",
     description:
-      "TypeScript on the server, running close to the database. Bespoke endpoints for your actual operations — not a drag-and-drop automation that falls over when your process gets interesting.",
+      "TypeScript on the server, running close to the database. Bespoke endpoints for your actual operations, not a drag-and-drop automation that falls over when your process gets interesting.",
     features: [
       "Next.js server actions + route handlers",
       "n8n for integration workflows",
@@ -45,7 +45,7 @@ const layers = [
     name: "AI & agents",
     heading: "Models that do the work, not narrate it.",
     description:
-      "Claude, Gemini, and specialised agents wired directly into the data. Voice agents on Vapi for inbound calls. Paperclip for internal orchestration. Not a chat sidebar — work gets done.",
+      "Claude, Gemini, and specialised agents wired directly into the data. Voice agents on Vapi for inbound calls. Paperclip for internal orchestration. Not a chat sidebar, work gets done.",
     features: [
       "Claude for structured reasoning",
       "Gemini for vision, image, and CV work",
@@ -58,11 +58,11 @@ const layers = [
     name: "Integrations",
     heading: "Native ties to the tools you already use.",
     description:
-      "Sage, Stripe, 8x8, Microsoft 365, Google Workspace, HubSpot (if we're replacing it gradually), WhatsApp, email — whatever you run, we integrate as first-class citizens.",
+      "Sage, Stripe, 8x8, Microsoft 365, Google Workspace, HubSpot (if we're replacing it gradually), WhatsApp, email. Whatever you run, we integrate as first-class citizens.",
     features: [
-      "Sage — bookkeeping & VAT",
-      "Stripe — payments",
-      "8x8 / Vapi — telephony",
+      "Sage: bookkeeping & VAT",
+      "Stripe: payments",
+      "8x8 / Vapi: telephony",
       "IMAP, API, webhook-first design",
     ],
   },
@@ -71,7 +71,7 @@ const layers = [
     name: "Interface",
     heading: "An interface shaped to your operators.",
     description:
-      "Not a default Salesforce-lightning shell. A considered product design — typography, motion, information density — built for the specific people who'll live in it every day.",
+      "Not a default Salesforce-lightning shell. A considered product design, with typography, motion and information density built for the specific people who'll live in it every day.",
     features: [
       "Next.js + React, designed from scratch",
       "Dark mode, considered motion, fast",
@@ -97,10 +97,10 @@ export default function PlatformPage() {
             <span className="italic text-gradient-accent">shape of you.</span>
           </h1>
           <p className="mt-8 max-w-[62ch] text-[17px] md:text-[19px] leading-[1.6] text-cream/75">
-            We don't ship a product. We ship your platform. Five layers —
-            data, logic, AI, integrations, and interface — assembled from
-            best-in-class primitives and moulded to how your business
-            genuinely operates.
+            Every website, CRM, app and automation we build sits on the same
+            five layers: data, logic, AI, integrations and interface,
+            assembled from proven primitives and moulded to how your business
+            genuinely operates. Then hosted and run by us.
           </p>
         </Section>
       </section>
@@ -198,7 +198,7 @@ export default function PlatformPage() {
             </h2>
             <p className="mt-6 max-w-[52ch] text-[16px] text-cream/75 leading-relaxed">
               Book a 30-minute walkthrough. We'll show you the actual tenant
-              dashboards, the agent infrastructure, and the deploy pipeline —
+              dashboards, the agent infrastructure, and the deploy pipeline,
               on live, working systems.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">

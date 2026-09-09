@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
 const links = [
+  { href: "/services", label: "Services" },
   { href: "/platform", label: "Platform" },
   { href: "/work", label: "Work" },
   { href: "/vs", label: "Compare" },

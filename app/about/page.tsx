@@ -8,25 +8,25 @@ import { Reveal } from "@/components/shared/reveal";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Orriq is built by JCL Marketing — a boutique studio that got tired of bending clients around generic SaaS.",
+    "Orriq is the studio formerly known as JCL Marketing: websites, hosting, CRMs, apps and automation for UK businesses, built and run by a small senior team.",
 };
 
 const principles = [
   {
     title: "Your business is not a template.",
-    body: "We start with how your company actually operates — the objects, the flows, the edge cases — and build software that reflects it. Not the other way around.",
+    body: "We start with how your company actually operates: the objects, the flows, the edge cases. Then we build software that reflects it. Not the other way around.",
   },
   {
     title: "Modern infrastructure, calmly applied.",
-    body: "We use what's best — Supabase, Next.js, Vercel, the current frontier LLMs — without chasing hype. Novelty is not a value; good taste is.",
+    body: "We use what is best, from self-hosted Postgres and Next.js to the current frontier models, without chasing hype. Novelty is not a value. Good taste is.",
   },
   {
     title: "Own your operating system.",
-    body: "Every build belongs to the client. The code, the database, the documentation. If we part ways, you keep running. That's the deal.",
+    body: "Every build belongs to the client. The code, the database, the domain, the documentation. If we part ways, you keep running. That is the deal.",
   },
   {
     title: "British understatement.",
-    body: "We don't do 'empower'. We don't do 'transform'. We build things, ship them, and explain them in plain English.",
+    body: "We do not do 'empower'. We do not do 'transform'. We build things, ship them, host them, and explain them in plain English.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <Section>
           <Eyebrow>About</Eyebrow>
           <h1 className="mt-6 font-sans font-semibold tracking-tight text-[clamp(2.75rem,6vw,5.5rem)] leading-[0.98] tracking-[-0.035em] max-w-[22ch]">
-            Built by an agency that got tired of renting software.
+            An agency that got tired of renting software, so it built its own.
           </h1>
         </Section>
       </section>
@@ -51,22 +51,26 @@ export default function AboutPage() {
           </div>
           <Reveal className="md:col-span-8 space-y-6 text-[17px] leading-[1.65] text-cream/80 max-w-[60ch]">
             <p>
-              Orriq started as an internal build. JCL Marketing — a British
-              boutique studio — was drowning in SaaS subscriptions. HubSpot for
-              CRM. Monday for projects. Zapier to duct-tape them together. Nine
-              tools, three spreadsheets, two part-time admins keeping it
-              running.
+              Orriq began life as JCL Marketing, a Birmingham studio founded in
+              2021 that built and hosted websites for trades, manufacturers and
+              local firms. Over ninety of those sites still run on servers we
+              manage today.
             </p>
             <p>
-              So we built what we actually needed — a single multi-tenant
-              platform on Supabase that replaced all of it. Then a client
-              asked for the same thing, in the shape of their business. Then
-              another.
+              The agency itself was drowning in software. HubSpot for CRM,
+              Monday for projects, Zapier to tape them together. Nine tools,
+              three spreadsheets, two part-time admins. So we built what we
+              actually needed: one multi-tenant platform on a self-hosted
+              database that replaced all of it.
             </p>
             <p>
-              Five builds later, we realised the thing we'd made was a
-              repeatable approach: take modern infrastructure, shape it around
-              the company in front of you, own the result. That's Orriq.
+              Then a client asked for the same thing in the shape of their
+              business. Then another. Then someone wanted the phone answered by
+              an AI agent, someone else wanted their gym off TeamUp, and a
+              scaffolding boss wanted to run his CRM from Telegram. Sixteen
+              builds later the pattern was obvious: take modern infrastructure,
+              shape it around the company in front of you, own the result, and
+              run the whole estate for them. That is Orriq.
             </p>
           </Reveal>
         </div>
@@ -102,21 +106,21 @@ export default function AboutPage() {
           </div>
           <Reveal className="md:col-span-8 space-y-6 text-[16px] leading-[1.65] text-cream/75 max-w-[58ch]">
             <p>
-              Small, senior, deliberately so. The same two engineers you meet
-              on the discovery call are the ones writing your schema, shipping
-              your deploys, and answering your Slack at 9pm when something
-              needs a decision.
+              Small, senior, deliberately so. The same two people you meet on
+              the discovery call are the ones writing your schema, building
+              your theme, shipping your deploys and answering the message at
+              9pm when something needs a decision.
             </p>
             <p>
-              Based between Birmingham and remote — we work with clients
-              across the UK and Europe. For larger builds we bring in trusted
-              collaborators, never an offshore subcontractor pool you didn't
-              agree to.
+              Based in Solihull and Birmingham, working with clients across
+              the UK. For larger builds we bring in trusted collaborators,
+              never an offshore subcontractor pool you did not agree to.
             </p>
             <p>
               Jon Lawson founded JCL Marketing in 2021. Orriq is his answer to
-              the question he kept getting from clients: "can you just make it
-              actually fit us?"
+              the question he kept getting from clients: &ldquo;can you just
+              make it actually fit us?&rdquo; Jake Whitehead builds the
+              automation and AI systems that make every platform run.
             </p>
           </Reveal>
         </div>

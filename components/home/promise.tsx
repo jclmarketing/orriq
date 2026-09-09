@@ -16,7 +16,7 @@ const phases = [
   {
     when: "Week 2",
     title: "Core build & integration",
-    body: "Your defined modules — pipeline, jobs, quotes, automations — built and tested in your tenant against real data structures.",
+    body: "Your defined modules (pipeline, jobs, quotes, automations) built and tested in your tenant against real data structures.",
   },
   {
     when: "Week 3",
@@ -39,12 +39,13 @@ export function Promise() {
         </MonoLabel>
         <h2 className="mt-5 font-sans font-semibold tracking-tight text-[clamp(2rem,4vw,3.5rem)] leading-[1.02] tracking-[-0.03em]">
           Live in 30 days.{" "}
-          <span className="italic text-gradient-accent">Or you don't pay.</span>
+          <span className="italic text-gradient-accent">Or you don&apos;t pay.</span>
         </h2>
         <p className="mt-5 text-[15.5px] leading-[1.6] text-cream/70">
-          We agree the outcome before we engage. If your operating system isn't
-          live within 30 days, the build is on us. No partial credit. No
-          renegotiated scope. No exceptions.
+          For platform builds we agree the outcome before we engage. If it is
+          not live within 30 days, the build is on us. No partial credit, no
+          renegotiated scope, no exceptions. Websites ship faster still: two
+          to three weeks from brief to launch is typical.
         </p>
       </div>
 
@@ -75,10 +76,10 @@ export function Promise() {
 
       <div className="mt-12 grid gap-6 md:grid-cols-4 max-w-[1100px]">
         {[
-          { k: "Single team", v: "No offshore handoffs, no agency layer-cake. The two people on the call are the two people who build it." },
+          { k: "Single team", v: "No offshore hand-offs, no agency layer cake. The two people on the call are the two people who build it." },
           { k: "Fixed scope", v: "Outcomes defined, written down, signed off. Scope creep is our problem, not yours." },
-          { k: "Visible weekly", v: "Working software every Friday. No deck-driven status updates." },
-          { k: "Owned at handover", v: "Code, database, documentation. Yours forever — we just keep building." },
+          { k: "Visible weekly", v: "Working software every Friday, on a staging link you can click." },
+          { k: "Owned at handover", v: "Code, database, documentation. Yours forever. We just keep building." },
         ].map((c) => (
           <div key={c.k} className="flex flex-col gap-2">
             <div className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-cyan/80">{c.k}</div>

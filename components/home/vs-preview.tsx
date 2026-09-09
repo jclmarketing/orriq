@@ -15,9 +15,9 @@ export function VsPreview() {
           <span className="italic text-gradient-accent">something generic</span>?
         </h2>
         <p className="mt-6 text-[16px] text-cream/70 leading-relaxed">
-          We've written the comparison so you don't have to. Honest reads on why
-          bespoke infrastructure beats templated SaaS — and, candidly, where it
-          doesn't.
+          We&apos;ve written the comparison so you don&apos;t have to. Honest reads on why
+          bespoke infrastructure beats templated SaaS and, candidly, where it
+          doesn&apos;t.
         </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-px hairline rounded-2xl overflow-hidden bg-white/[0.06]">
@@ -45,7 +45,7 @@ export function VsPreview() {
               <ArrowUpRight className="h-4 w-4 text-cream/40 group-hover:text-cream transition-colors" />
             </div>
             <div aria-hidden className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
-              <div className="absolute inset-0 bg-[radial-gradient(closest-side,_rgba(124,58,237,0.12),_transparent_70%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(closest-side,_rgba(168,85,247,0.12),_transparent_70%)]" />
             </div>
           </Link>
         ))}

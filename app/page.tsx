@@ -1,5 +1,5 @@
 import { HeroV2 } from "@/components/home/hero-v2";
-import { ProductsGrid } from "@/components/home/products-grid";
+import { ServicesGrid } from "@/components/home/services-grid";
 import { MethodPipeline } from "@/components/home/method-pipeline";
 import { Stats } from "@/components/home/stats";
 import { PlatformTour } from "@/components/home/platform-tour";
@@ -22,7 +22,7 @@ export default function HomePage() {
       {/* Below-the-fold sections are scroll-linked: opacity + y tied to scroll
           progress through the viewport, naturally reversing on the way up. */}
       <Reveal>
-        <ProductsGrid />
+        <ServicesGrid />
       </Reveal>
       <Reveal>
         <MethodPipeline />
