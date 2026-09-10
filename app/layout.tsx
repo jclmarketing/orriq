@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist",
@@ -53,6 +54,11 @@ export default function RootLayout({
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        {/* Orriq behaviour tracker (our own CRM heatmaps). Cookie-free, no personal data. */}
+        <Script
+          src="https://jcl-db.jclmarketing.co.uk/functions/v1/heatmap-collect?k=da7c602190668225f2c822ba"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
