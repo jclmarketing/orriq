@@ -78,8 +78,11 @@ export function Footer() {
         </div>
         <div className="mt-16 pt-8 hairline-t flex flex-col md:flex-row justify-between gap-4 text-[12px] text-fog">
           <div>© {new Date().getFullYear()} Orriq. All rights reserved.</div>
-          <div className="flex gap-6">
-            <span>Registered in England.</span>
+          <div className="flex flex-wrap gap-6">
+            <a href="/terms" className="hover:text-cream transition-colors">
+              Terms and Conditions
+            </a>
+            <span>Orriq is a trading name of Jonathan Lawson.</span>
             <a
               href="mailto:jon@orriq.com"
               className="hover:text-cream transition-colors"
